@@ -22,9 +22,9 @@ offset_bottom = 40.0
 [node name="Start" type="Button" parent="Button_manager" unique_id=1497102407]
 layout_mode = 0
 offset_left = 1303.0
-offset_top = 251.0
+offset_top = 227.0
 offset_right = 1729.0
-offset_bottom = 361.0
+offset_bottom = 337.0
 theme_override_fonts/font = ExtResource("2_yonvy")
 theme_override_font_sizes/font_size = 40
 text = "START"
@@ -32,9 +32,9 @@ text = "START"
 [node name="Levels" type="Button" parent="Button_manager" unique_id=1420856054]
 layout_mode = 0
 offset_left = 1302.0
-offset_top = 423.0
+offset_top = 399.0
 offset_right = 1728.0
-offset_bottom = 533.0
+offset_bottom = 509.0
 theme_override_font_sizes/font_size = 40
 text = "LEVELS
 "
@@ -42,18 +42,18 @@ text = "LEVELS
 [node name="Options" type="Button" parent="Button_manager" unique_id=1171796483]
 layout_mode = 0
 offset_left = 1304.0
-offset_top = 597.0
+offset_top = 573.0
 offset_right = 1730.0
-offset_bottom = 707.0
+offset_bottom = 683.0
 theme_override_font_sizes/font_size = 40
 text = "OPTIONS"
 
 [node name="Quit" type="Button" parent="Button_manager" unique_id=1065574745]
 layout_mode = 0
 offset_left = 1306.0
-offset_top = 773.0
+offset_top = 749.0
 offset_right = 1732.0
-offset_bottom = 883.0
+offset_bottom = 859.0
 theme_override_font_sizes/font_size = 40
 text = "QUIT"
 
