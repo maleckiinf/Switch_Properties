@@ -1,0 +1,77 @@
+[gd_scene format=3 uid="uid://o2r7g7vxc26x"]
+
+[ext_resource type="Script" uid="uid://cmubyw4gow56a" path="res://scripts/game.gd" id="1_631nl"]
+[ext_resource type="PackedScene" uid="uid://cyuq0is1d3de2" path="res://scenes/objects/box.tscn" id="2_c17sc"]
+[ext_resource type="PackedScene" uid="uid://bs72ogkvdd7d6" path="res://addons/proto_controller/proto_controller.tscn" id="3_5wr67"]
+[ext_resource type="PackedScene" uid="uid://bhe58pydydb81" path="res://scenes/objects/ball.tscn" id="4_4246h"]
+[ext_resource type="Material" uid="uid://i1kkoxi1tf8p" path="res://addons/godot-prototype-texture/new_standard_material_3d.tres" id="5_ph2vj"]
+[ext_resource type="PackedScene" uid="uid://6611wd1qsnkc" path="res://scenes/interactables/pressure_plate.tscn" id="6_vkgyr"]
+[ext_resource type="PackedScene" uid="uid://biyxpmolrmmn0" path="res://scenes/interactables/bunker_door.tscn" id="7_c17sc"]
+[ext_resource type="PackedScene" uid="uid://b2kjd7fnvycix" path="res://scenes/UI/bottom_panel.tscn" id="8_5wr67"]
+
+[node name="TestRoom" type="Node3D" unique_id=1208784897]
+script = ExtResource("1_631nl")
+
+[node name="Environment" type="Node" parent="." unique_id=293096412]
+
+[node name="Walls" type="CSGCombiner3D" parent="Environment" unique_id=1242708376]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.5)
+use_collision = true
+
+[node name="wall1" type="CSGBox3D" parent="Environment/Walls" unique_id=957706617]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 1, 6)
+material_override = ExtResource("5_ph2vj")
+size = Vector3(6, 2, 1)
+material = ExtResource("5_ph2vj")
+
+[node name="wall2" type="CSGBox3D" parent="Environment/Walls" unique_id=2055429692]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 1, 6)
+material_override = ExtResource("5_ph2vj")
+size = Vector3(4, 2, 1)
+material = ExtResource("5_ph2vj")
+
+[node name="floor" type="CSGBox3D" parent="Environment" unique_id=1344938140]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 2.5)
+use_collision = true
+size = Vector3(16, 3, 20)
+material = ExtResource("5_ph2vj")
+
+[node name="subtraction" type="CSGBox3D" parent="Environment/floor" unique_id=322129711]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.008466482, 1, -0.505188)
+operation = 2
+use_collision = true
+size = Vector3(14, 3, 17)
+material = ExtResource("5_ph2vj")
+metadata/_edit_lock_ = true
+
+[node name="Entities" type="Node" parent="." unique_id=1875624517]
+
+[node name="RigidBox" parent="Entities" unique_id=1309963547 instance=ExtResource("2_c17sc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.3647704, 2.987368, -3.3647656)
+
+[node name="RigidBox2" parent="Entities" unique_id=985006056 instance=ExtResource("2_c17sc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.6682248, 2.0457153, -3.6120977)
+
+[node name="ProtoController" parent="Entities" unique_id=485937336 instance=ExtResource("3_5wr67")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 1)
+
+[node name="RigidBall" parent="Entities" unique_id=1866180119 instance=ExtResource("4_4246h")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.126787, 2.4817472, -1.6040068)
+
+[node name="PressurePlate" parent="Entities" unique_id=1716459305 instance=ExtResource("6_vkgyr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.4942126, 0, -1.5075836)
+
+[node name="Bunker Door" parent="Entities" unique_id=1714654760 instance=ExtResource("7_c17sc")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 2, 0, 6.4802985)
+
+[node name="Lighting" type="Node" parent="." unique_id=1306284075]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="Lighting" unique_id=444816623]
+transform = Transform3D(0.4896231, 0.7726558, -0.4040696, 0, 0.46341753, 0.88614005, 0.8719342, -0.43387464, 0.22689994, -4.3818116, 2.6786435, 0)
+
+[node name="UI" type="Node" parent="." unique_id=193490405]
+
+[node name="BottomPanel" parent="UI" unique_id=686628392 instance=ExtResource("8_5wr67")]
+
+[connection signal="body_shape_entered" from="Entities/PressurePlate" to="Entities/Bunker Door" method="_on_pressure_plate_body_shape_entered"]
+[connection signal="body_shape_exited" from="Entities/PressurePlate" to="Entities/Bunker Door" method="_on_pressure_plate_body_shape_exited"]

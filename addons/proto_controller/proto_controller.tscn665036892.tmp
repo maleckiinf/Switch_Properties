@@ -1,0 +1,66 @@
+[gd_scene format=3 uid="uid://bs72ogkvdd7d6"]
+
+[ext_resource type="Script" uid="uid://cpud08jdrs37u" path="res://addons/proto_controller/proto_controller.gd" id="1_ucva2"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_oh6kn"]
+albedo_color = Color(0.953, 0.663, 0.294, 1)
+roughness = 0.0
+
+[sub_resource type="BoxMesh" id="BoxMesh_g2uji"]
+material = SubResource("StandardMaterial3D_oh6kn")
+size = Vector3(0.5, 0.5, 0.5)
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_iof21"]
+radius = 0.4
+height = 1.8
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_g2uji"]
+radius = 0.1
+
+[node name="ProtoController" type="CharacterBody3D" unique_id=267056480]
+script = ExtResource("1_ucva2")
+can_move = null
+has_gravity = null
+can_jump = null
+look_speed = null
+move_speed = null
+jump_velocity = null
+input_left = null
+input_right = null
+input_forward = null
+input_back = null
+input_jump = null
+switch_1 = null
+switch_2 = null
+switch_3 = null
+Left_switch = null
+Right_switch = null
+specs = null
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1241092094]
+mesh = SubResource("BoxMesh_g2uji")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="MeshInstance3D" unique_id=2133007587]
+light_color = Color(1, 0.64705884, 0, 1)
+light_energy = 0.0
+omni_range = 3.0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=264071473]
+transform = Transform3D(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.9, 0)
+shape = SubResource("CapsuleShape3D_iof21")
+
+[node name="Head" type="Node3D" parent="." unique_id=567008382]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.7, 0)
+
+[node name="Camera3D" type="Camera3D" parent="Head" unique_id=659831318]
+
+[node name="ObjectGrabberShapeCast" type="ShapeCast3D" parent="Head" unique_id=1661578338]
+shape = SubResource("SphereShape3D_g2uji")
+target_position = Vector3(0, 0, -5)
+collision_mask = 5
+
+[node name="SpringArm3D" type="SpringArm3D" parent="Head" unique_id=42992435]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
+spring_length = 1.5
+
+[node name="GrabbedAnchor" type="Marker3D" parent="Head/SpringArm3D" unique_id=907858759]

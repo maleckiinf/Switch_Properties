@@ -1,0 +1,63 @@
+[gd_scene format=3 uid="uid://mmp4eojjupo4"]
+
+[ext_resource type="Script" uid="uid://cscoipfsra5ep" path="res://scenes/UI/main_menu.gd" id="1_qwnig"]
+[ext_resource type="FontFile" uid="uid://coucks7vdfou5" path="res://fonts/Michroma-Regular.ttf" id="2_yonvy"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_yonvy"]
+load_path = "res://.godot/imported/0001.png-afe8ec63d5babe00ded65dd737f8fd24.ctex"
+
+[node name="main_menu" type="Node2D" unique_id=1990999014]
+script = ExtResource("1_qwnig")
+
+[node name="0001" type="Sprite2D" parent="." unique_id=294057506]
+position = Vector2(962, 541)
+texture = SubResource("CompressedTexture2D_yonvy")
+
+[node name="Button_manager" type="Control" parent="." unique_id=466581895]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Start" type="Button" parent="Button_manager" unique_id=1497102407]
+layout_mode = 0
+offset_left = 1303.0
+offset_top = 251.0
+offset_right = 1729.0
+offset_bottom = 361.0
+theme_override_fonts/font = ExtResource("2_yonvy")
+theme_override_font_sizes/font_size = 40
+text = "START"
+
+[node name="Levels" type="Button" parent="Button_manager" unique_id=1420856054]
+layout_mode = 0
+offset_left = 1302.0
+offset_top = 423.0
+offset_right = 1728.0
+offset_bottom = 533.0
+theme_override_font_sizes/font_size = 40
+text = "LEVELS
+"
+
+[node name="Options" type="Button" parent="Button_manager" unique_id=1171796483]
+layout_mode = 0
+offset_left = 1304.0
+offset_top = 597.0
+offset_right = 1730.0
+offset_bottom = 707.0
+theme_override_font_sizes/font_size = 40
+text = "OPTIONS"
+
+[node name="Quit" type="Button" parent="Button_manager" unique_id=1065574745]
+layout_mode = 0
+offset_left = 1306.0
+offset_top = 773.0
+offset_right = 1732.0
+offset_bottom = 883.0
+theme_override_font_sizes/font_size = 40
+text = "QUIT"
+
+[connection signal="pressed" from="Button_manager/Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="Button_manager/Levels" to="." method="_on_levels_pressed"]
+[connection signal="pressed" from="Button_manager/Options" to="." method="_on_options_pressed"]
+[connection signal="pressed" from="Button_manager/Quit" to="." method="_on_quit_pressed"]

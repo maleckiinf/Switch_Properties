@@ -1,0 +1,80 @@
+[gd_scene format=3 uid="uid://b2kjd7fnvycix"]
+
+[ext_resource type="Script" uid="uid://cvqnmxqfvgbjb" path="res://scenes/UI/bottom_panel.gd" id="1_cwfdd"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_cwfdd"]
+font_size = 40
+
+[sub_resource type="LabelSettings" id="LabelSettings_4doru"]
+font_size = 40
+
+[sub_resource type="LabelSettings" id="LabelSettings_cyaf1"]
+font_size = 40
+
+[node name="BottomPanel" type="Control" unique_id=686628392]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_cwfdd")
+
+[node name="WideBottom" type="Panel" parent="." unique_id=247645273]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.896
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 0.3199463
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="spec_1" type="Label" parent="WideBottom" unique_id=1607271765]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.25
+anchor_top = 0.5
+anchor_right = 0.25
+anchor_bottom = 0.5
+offset_left = -0.5
+offset_top = -27.5
+offset_right = 0.5
+offset_bottom = 27.5
+grow_horizontal = 2
+grow_vertical = 2
+label_settings = SubResource("LabelSettings_cwfdd")
+uppercase = true
+
+[node name="spec_2" type="Label" parent="WideBottom" unique_id=1191754188]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -0.5
+offset_top = -27.5
+offset_right = 0.5
+offset_bottom = 27.5
+grow_horizontal = 2
+grow_vertical = 2
+label_settings = SubResource("LabelSettings_4doru")
+uppercase = true
+
+[node name="spec_3" type="Label" parent="WideBottom" unique_id=1559897978]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.75
+anchor_top = 0.5
+anchor_right = 0.75
+anchor_bottom = 0.5
+offset_left = -0.5
+offset_top = -27.5
+offset_right = 0.5
+offset_bottom = 27.5
+grow_horizontal = 2
+grow_vertical = 2
+label_settings = SubResource("LabelSettings_cyaf1")
+uppercase = true
