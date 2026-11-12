@@ -30,12 +30,11 @@ func _ready() -> void:
 	proto_controller.change_gold.connect(_on_change_gold)
 	
 	# Box signals
-	rigid_box.change_proto.connect(_on_change_proto)
-	rigid_box2.change_proto.connect(_on_change_proto)
-	rigid_box3.change_proto.connect(_on_change_proto)
-	rigid_box4.change_proto.connect(_on_change_proto)
-	rigid_box5.change_proto.connect(_on_change_proto)
-	rigid_box6.change_proto.connect(_on_change_proto)
+	var boxes = get_tree().get_nodes_in_group("rigid_boxes")
+
+	for box in boxes:
+		if box is RigidBox:
+			box.change_proto.connect(_on_change_proto)
 
 
 # ==================================================

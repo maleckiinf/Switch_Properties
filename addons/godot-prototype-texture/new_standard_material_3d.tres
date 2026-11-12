@@ -1,6 +1,6 @@
 [gd_resource type="StandardMaterial3D" format=3 uid="uid://i1kkoxi1tf8p"]
 
-[ext_resource type="Texture2D" uid="uid://dwgqv5yoe0iny" path="res://addons/godot-prototype-texture/PNG/checker_512x512/checker_black_512x512.png" id="1_knruh"]
+[ext_resource type="Texture2D" uid="uid://cw0cna6tpf5y" path="res://addons/godot-prototype-texture/PNG/grid_1024x1024/grid_white_1024x1024.png" id="1_knruh"]
 
 [resource]
 albedo_texture = ExtResource("1_knruh")

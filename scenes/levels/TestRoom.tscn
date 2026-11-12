@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://cmubyw4gow56a" path="res://scripts/game.gd" id="1_631nl"]
 [ext_resource type="PackedScene" uid="uid://cyuq0is1d3de2" path="res://scenes/objects/box.tscn" id="2_c17sc"]
-[ext_resource type="PackedScene" uid="uid://bs72ogkvdd7d6" path="res://addons/proto_controller/proto_controller.tscn" id="3_5wr67"]
+[ext_resource type="PackedScene" uid="uid://bs72ogkvdd7d6" path="res://scenes/player/proto_controller.tscn" id="3_5wr67"]
 [ext_resource type="PackedScene" uid="uid://bhe58pydydb81" path="res://scenes/objects/ball.tscn" id="4_4246h"]
 [ext_resource type="Material" uid="uid://i1kkoxi1tf8p" path="res://addons/godot-prototype-texture/new_standard_material_3d.tres" id="5_ph2vj"]
 [ext_resource type="PackedScene" uid="uid://6611wd1qsnkc" path="res://scenes/interactables/pressure_plate.tscn" id="6_vkgyr"]

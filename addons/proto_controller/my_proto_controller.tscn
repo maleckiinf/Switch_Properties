@@ -1,6 +1,6 @@
-[gd_scene format=3 uid="uid://bs72ogkvdd7d6"]
+[gd_scene format=3 uid="uid://dm3r1xd0wdsy8"]
 
-[ext_resource type="Script" uid="uid://cpud08jdrs37u" path="res://addons/proto_controller/proto_controller.gd" id="1_ucva2"]
+[ext_resource type="Script" uid="uid://cpud08jdrs37u" path="res://addons/proto_controller/proto_controller.gd" id="1_qyjmx"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5hfox"]
 albedo_color = Color(1, 0.64705884, 0, 1)
@@ -20,7 +20,7 @@ radius = 0.1
 [node name="ProtoController" type="CharacterBody3D" unique_id=267056480]
 collision_layer = 2
 collision_mask = 5
-script = ExtResource("1_ucva2")
+script = ExtResource("1_qyjmx")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=201427015]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
