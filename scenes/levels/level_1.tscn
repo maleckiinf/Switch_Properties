@@ -1,0 +1,76 @@
+[gd_scene format=3 uid="uid://dkynfwklyycu4"]
+
+[ext_resource type="PackedScene" uid="uid://bi2h7xu8ecfpb" path="res://scenes/interactables/wall_block.tscn" id="1_ksju7"]
+[ext_resource type="PackedScene" uid="uid://biyxpmolrmmn0" path="res://scenes/interactables/bunker_door.tscn" id="2_6iamk"]
+[ext_resource type="PackedScene" uid="uid://bs72ogkvdd7d6" path="res://addons/proto_controller/proto_controller.tscn" id="3_nsrm0"]
+[ext_resource type="PackedScene" uid="uid://b2kjd7fnvycix" path="res://scenes/UI/bottom_panel.tscn" id="4_x42e6"]
+
+[node name="LEVEL_1" type="Node3D" unique_id=399344112]
+
+[node name="Environment" type="Node" parent="." unique_id=1775693312]
+
+[node name="outside_wall_block" parent="Environment" unique_id=1605564672 instance=ExtResource("1_ksju7")]
+transform = Transform3D(1.000589, 0, 0, 0, 1.000589, 0, 0, 0, 1.000589, -0.0049250126, -0.014863014, 0.0015015602)
+size = Vector3(50, 20, 30)
+metadata/_edit_lock_ = true
+
+[node name="subtraction" parent="Environment/outside_wall_block" unique_id=248252989 instance=ExtResource("1_ksju7")]
+transform = Transform3D(0.99999994, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, 0, 0, 0)
+operation = 2
+size = Vector3(28, 18, 28)
+metadata/_edit_lock_ = true
+
+[node name="subtraction2" parent="Environment/outside_wall_block" unique_id=983294720 instance=ExtResource("1_ksju7")]
+transform = Transform3D(0.9999678, 0, 0, 0, 0.9999678, 0, 0, 0, 0.9999678, -19.50024, -6.9997654, -7.744038e-07)
+operation = 2
+size = Vector3(9, 4, 6)
+metadata/_edit_lock_ = true
+
+[node name="subtraction3" parent="Environment/outside_wall_block" unique_id=343122049 instance=ExtResource("1_ksju7")]
+transform = Transform3D(0.9999678, 0, 0, 0, 0.9999678, 0, 0, 0, 0.9999678, 19.477356, -6.999765, -7.7440376e-07)
+operation = 2
+size = Vector3(9, 4, 6)
+metadata/_edit_lock_ = true
+
+[node name="subtraction_door" type="CSGBox3D" parent="Environment/outside_wall_block" unique_id=24519698]
+transform = Transform3D(2.0500891, 0, 0, 0, 0.9999678, 0, 0, 0, 0.8841, 14.400018, -7.6942635, -7.759081e-07)
+operation = 2
+size = Vector3(1, 2.559082, 3)
+
+[node name="subtraction_door2" type="CSGBox3D" parent="Environment/outside_wall_block" unique_id=703075211]
+transform = Transform3D(2.0488822, 0, 0, 0, 0.999379, 0, 0, 0, 0.88357955, -14.5866, -7.674877, -0.0015014517)
+operation = 2
+size = Vector3(1, 2.559082, 3)
+
+[node name="Entities" type="Node" parent="." unique_id=1962065255]
+
+[node name="Bunker Door" parent="Entities" unique_id=508301085 instance=ExtResource("2_6iamk")]
+transform = Transform3D(-2.1855694e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.1855694e-08, -14.509853, -9.004066, -0.007069111)
+
+[node name="Bunker Door2" parent="Entities" unique_id=2144935164 instance=ExtResource("2_6iamk")]
+transform = Transform3D(-2.1855694e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.1855694e-08, 14.496927, -9.004066, -0.007069111)
+
+[node name="ProtoController" parent="." unique_id=267056480 instance=ExtResource("3_nsrm0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, -8.447372, 1)
+
+[node name="Lighting" type="Node" parent="." unique_id=1305953467]
+
+[node name="UI" type="Node" parent="." unique_id=420425141]
+
+[node name="BottomPanel" parent="UI" unique_id=686628392 instance=ExtResource("4_x42e6")]
+
+[node name="Aim" type="Label" parent="UI" unique_id=734890114]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "o"
+horizontal_alignment = 1
+vertical_alignment = 1

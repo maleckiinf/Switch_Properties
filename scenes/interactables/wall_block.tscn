@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://bi2h7xu8ecfpb"]
+
+[ext_resource type="Material" uid="uid://i1kkoxi1tf8p" path="res://addons/godot-prototype-texture/new_standard_material_3d.tres" id="1_1k7da"]
+
+[node name="wall_block" type="CSGBox3D" unique_id=1605564672]
+use_collision = true
+material = ExtResource("1_1k7da")
