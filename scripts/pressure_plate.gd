@@ -8,7 +8,9 @@ var body_counter: int = 0
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+	#red = red.duplicate() # Not necessary if only material is shared
+	var material = red.get_active_material(0).duplicate()
+	red.set_surface_override_material(0, material)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -28,6 +30,6 @@ func _on_body_shape_exited(body_rid: RID, body: Node3D, body_shape_index: int, l
 	
 func is_pressure_plate_empty( number_of_bodies: int):
 	if number_of_bodies <= 0:
-		red.mesh.material.albedo_color = Color.RED
+		red.get_active_material(0).albedo_color = Color.RED
 	else:
-		red.mesh.material.albedo_color = Color.GREEN
+		red.get_active_material(0).albedo_color = Color.GREEN

@@ -69,13 +69,13 @@ operation = 2
 size = Vector3(1, 2.559082, 3)
 
 [node name="subtraction_door2" type="CSGBox3D" parent="Environment/outside_wall_block" unique_id=703075211]
-transform = Transform3D(2.0488822, 0, 0, 0, 0.999379, 0, 0, 0, 0.88357955, -14.5866, -7.674877, -0.0015014517)
+transform = Transform3D(2.0488825, 0, 0, 0, 0.9993789, 0, 0, 0, 0.88357955, -14.586599, -7.674876, -0.0015014517)
 operation = 2
 size = Vector3(1, 2.559082, 3)
 
 [node name="Entities" type="Node" parent="." unique_id=1962065255]
 
-[node name="Exit_Door" parent="Entities" unique_id=2144935164 instance=ExtResource("2_6iamk")]
+[node name="Exit_Door" parent="Entities" unique_id=2144935164 groups=["doors"] instance=ExtResource("2_6iamk")]
 transform = Transform3D(-2.1855694e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.1855694e-08, 14.496927, -9.004066, -0.007069111)
 
 [node name="ProtoController" parent="Entities" unique_id=267056480 instance=ExtResource("3_nsrm0")]
@@ -106,8 +106,11 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 10.8
 physics_material_override = SubResource("PhysicsMaterial_iav0o")
 specs = Array[String](["SIZE_MULTIPLY", "-", "-"])
 
-[node name="PressurePlate" parent="Entities" unique_id=1716459305 instance=ExtResource("7_oc4kc")]
+[node name="PressurePlate" parent="Entities" unique_id=1716459305 groups=["pressure_plates"] instance=ExtResource("7_oc4kc")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -9, 0)
+
+[node name="PressurePlate2" parent="Entities" unique_id=1004183235 groups=["pressure_plates"] instance=ExtResource("7_oc4kc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -9, 5)
 
 [node name="Lighting" type="Node" parent="." unique_id=1305953467]
 
