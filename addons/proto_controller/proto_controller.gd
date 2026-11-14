@@ -91,7 +91,6 @@ signal change_gold(direction : int)
 # ==================================================
 
 func _ready() -> void:
-	print(specs)
 	check_input_mappings()
 	
 	# Create unique material instance
@@ -126,6 +125,7 @@ func _unhandled_input(event: InputEvent) -> void:
 
 	# Object interaction
 	if Input.is_action_just_pressed("interact"):
+		set_collision_mask_value(3, true)
 		if grabbed_object:
 			grabbed_object = null
 		else:
@@ -133,6 +133,7 @@ func _unhandled_input(event: InputEvent) -> void:
 
 	# Throw object
 	if Input.is_action_just_pressed("interact2"):
+		set_collision_mask_value(3, true)
 		if grabbed_object:
 			throw_object()
 
@@ -197,7 +198,8 @@ func try_grab_object() -> void:
 
 	if collided is RigidBody3D:
 		grabbed_object = collided
-
+		set_collision_mask_value(3, false)
+	
 
 func throw_object() -> void:
 
@@ -208,7 +210,7 @@ func throw_object() -> void:
 	grabbed_object.apply_impulse(
 		(-head.global_basis.z * 5.0) + Vector3(0.0, 2.0, 0.0)
 	)
-
+	
 	grabbed_object = null
 
 
@@ -319,8 +321,6 @@ func update_appearance() -> void:
 	elif collider.shape.height > 0.9:
 		$Head.position = Vector3( 0.0, 1.8, 0.0)
 
-	print($Head.position)
-	print(collider.shape.height)
 		
 	
 	if material is StandardMaterial3D:
@@ -335,8 +335,9 @@ func update_appearance() -> void:
 
 func _physics_process(delta: float) -> void:
 	
+	print(collision_mask)
+	
 	if first_change_label_emit:
-		print(specs)
 		change_label.emit(specs)
 		first_change_label_emit = false
 	
