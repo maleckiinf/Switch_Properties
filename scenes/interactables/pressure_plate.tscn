@@ -1,6 +1,9 @@
 [gd_scene format=3 uid="uid://6611wd1qsnkc"]
 
+[ext_resource type="Script" uid="uid://m681d5c6t3d4" path="res://scripts/pressure_plate.gd" id="1_e135u"]
+
 [sub_resource type="BoxShape3D" id="BoxShape3D_4doru"]
+size = Vector3(1, 0.1, 1)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_n1wfy"]
 albedo_color = Color(0.8745098, 0.4392157, 0.3647059, 1)
@@ -9,14 +12,30 @@ albedo_color = Color(0.8745098, 0.4392157, 0.3647059, 1)
 material = SubResource("StandardMaterial3D_n1wfy")
 size = Vector3(1, 0.1, 1)
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_e135u"]
+albedo_color = Color(0, 0, 0, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_7aunv"]
+material = SubResource("StandardMaterial3D_e135u")
+size = Vector3(0.8, 0.1, 0.8)
+
 [node name="PressurePlate" type="Area3D" unique_id=1716459305]
 collision_mask = 7
+script = ExtResource("1_e135u")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=550050461]
-transform = Transform3D(3, 0, 0, 0, 1, 0, 0, 0, 3, 0, 0.6, 0)
+transform = Transform3D(3, 0, 0, 0, 1, 0, 0, 0, 3, 0, 0.10050002, 0)
 shape = SubResource("BoxShape3D_4doru")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1706082711]
-transform = Transform3D(3, 0, 0, 0, 0.5, 0, 0, 0, 3, 0, 0.050000012, 0)
+[node name="red" type="MeshInstance3D" parent="." unique_id=1706082711]
+transform = Transform3D(3, 0, 0, 0, 0.5, 0, 0, 0, 3, 0, 0.02780573, 0)
 layers = 7
 mesh = SubResource("BoxMesh_4doru")
+
+[node name="black" type="MeshInstance3D" parent="." unique_id=2047336665]
+transform = Transform3D(3, 0, 0, 0, 0.5, 0, 0, 0, 3, 0, 0.07574546, 0)
+layers = 7
+mesh = SubResource("BoxMesh_7aunv")
+
+[connection signal="body_shape_entered" from="." to="." method="_on_body_shape_entered"]
+[connection signal="body_shape_exited" from="." to="." method="_on_body_shape_exited"]

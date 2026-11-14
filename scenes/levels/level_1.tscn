@@ -75,10 +75,10 @@ size = Vector3(1, 2.559082, 3)
 
 [node name="Entities" type="Node" parent="." unique_id=1962065255]
 
-[node name="Bunker Door" parent="Entities" unique_id=508301085 instance=ExtResource("2_6iamk")]
+[node name="Enter_Door" parent="Entities" unique_id=508301085 instance=ExtResource("2_6iamk")]
 transform = Transform3D(-2.1855694e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.1855694e-08, -14.509853, -9.004066, -0.007069111)
 
-[node name="Bunker Door2" parent="Entities" unique_id=2144935164 instance=ExtResource("2_6iamk")]
+[node name="Exit_Door" parent="Entities" unique_id=2144935164 instance=ExtResource("2_6iamk")]
 transform = Transform3D(-2.1855694e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.1855694e-08, 14.496927, -9.004066, -0.007069111)
 
 [node name="ProtoController" parent="Entities" unique_id=267056480 instance=ExtResource("3_nsrm0")]
@@ -110,7 +110,7 @@ physics_material_override = SubResource("PhysicsMaterial_iav0o")
 specs = Array[String](["SIZE_MULTIPLY", "-", "-"])
 
 [node name="PressurePlate" parent="Entities" unique_id=1716459305 instance=ExtResource("7_oc4kc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, -9, 1)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -9, 0)
 
 [node name="Lighting" type="Node" parent="." unique_id=1305953467]
 
@@ -154,3 +154,6 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=642651745]
+
+[connection signal="body_shape_entered" from="Entities/PressurePlate" to="Entities/Exit_Door" method="_on_pressure_plate_body_shape_entered"]
+[connection signal="body_shape_exited" from="Entities/PressurePlate" to="Entities/Exit_Door" method="_on_pressure_plate_body_shape_exited"]

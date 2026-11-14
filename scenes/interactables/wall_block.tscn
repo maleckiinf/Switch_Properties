@@ -1,4 +1,10 @@
 [gd_scene format=3 uid="uid://bi2h7xu8ecfpb"]
 
+[ext_resource type="Texture2D" uid="uid://c5gtt56q1m0gh" path="res://addons/godot-prototype-texture/PNG/grid_1024x1024/grid_black_1024x1024.png" id="1_1k7da"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_q53rs"]
+albedo_texture = ExtResource("1_1k7da")
+
 [node name="wall_block" type="CSGBox3D" unique_id=1605564672]
+material_override = SubResource("StandardMaterial3D_q53rs")
 use_collision = true
