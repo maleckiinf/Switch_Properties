@@ -53,7 +53,7 @@ transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0
 spring_length = 2.0
 
 [node name="GrabbedAnchor" type="Marker3D" parent="Head/SpringArm3D" unique_id=907858759]
-gizmo_extents = 0.5
+gizmo_extents = 1.0
 
 [node name="RayCast3D" type="RayCast3D" parent="." unique_id=913344821]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9291153, 0)

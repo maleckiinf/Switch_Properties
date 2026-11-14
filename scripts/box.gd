@@ -86,6 +86,8 @@ func set_ob(spec_new: String, type_con: int) -> void:
 	ob_size_multiply = 0
 	ob_size_divide = 0
 	
+	mass = ob_size * ob_size
+	
 	for i in specs:
 		update_spec(i)
 
@@ -156,6 +158,7 @@ func update_appearance() -> void:
 	var ob_size_difference: float = (ob_size_multiply - ob_size_divide)
 	ob_size = 2 ** ob_size_difference
 	scale = Vector3( ob_size, ob_size, ob_size)
+	mass = ob_size * ob_size
 
 	if material is StandardMaterial3D:
 		material.albedo_color = ob_color
