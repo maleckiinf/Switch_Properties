@@ -112,6 +112,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -9, 0)
 [node name="PressurePlate2" parent="Entities" unique_id=1004183235 groups=["pressure_plates"] instance=ExtResource("7_oc4kc")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -9, 5)
 
+[node name="PressurePlate3" parent="Entities" unique_id=2020106939 groups=["pressure_plates"] instance=ExtResource("7_oc4kc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -9, -5)
+
 [node name="Lighting" type="Node" parent="." unique_id=1305953467]
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="Lighting" unique_id=143487372]

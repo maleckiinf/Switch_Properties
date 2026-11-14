@@ -1,83 +1,37 @@
+extends Node3D
 
-extends StaticBody3D
-
-
-# ==================================================
-# SETTINGS
-# ==================================================
-
-var is_open: bool = false
-var bodies_entered: int = 0
-
-
-# ==================================================
-# REFERENCES
-# ==================================================
-
+var is_open := false
 @onready var door_animation: AnimationPlayer = $"Door Animation"
 
+func _process(_delta: float) -> void:
 
-# ==================================================
-# DOOR CONTROL
-# ==================================================
+	var plates = get_tree().get_nodes_in_group("pressure_plates")
+
+	if plates.is_empty():
+		close_door()
+		return
+
+	for plate in plates:
+
+		if not plate.is_pressed:
+			close_door()
+			return
+
+	open_door()
+	
+	
+
 
 func open_door() -> void:
-
 	if is_open:
 		return
 
 	is_open = true
 	door_animation.play("open")
-
-
+	
 func close_door() -> void:
-
 	if not is_open:
 		return
 
 	is_open = false
 	door_animation.play_backwards("open")
-
-
-# ==================================================
-# PRESSURE PLATE
-# ==================================================
-
-func enter_trigger() -> void:
-
-	bodies_entered += 1
-
-	if bodies_entered == 1:
-		open_door()
-
-
-func exit_trigger() -> void:
-
-	bodies_entered = maxi(0, bodies_entered - 1)
-
-	if bodies_entered == 0:
-		close_door()
-
-
-# ==================================================
-# SIGNALS
-# ==================================================
-
-func _on_pressure_plate_body_shape_entered(
-	_body_rid: RID,
-	_body: Node3D,
-	_body_shape_index: int,
-	_local_shape_index: int
-) -> void:
-
-	enter_trigger()
-
-
-func _on_pressure_plate_body_shape_exited(
-	_body_rid: RID,
-	_body: Node3D,
-	_body_shape_index: int,
-	_local_shape_index: int
-) -> void:
-
-	exit_trigger()

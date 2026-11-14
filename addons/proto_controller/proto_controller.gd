@@ -335,7 +335,6 @@ func update_appearance() -> void:
 
 func _physics_process(delta: float) -> void:
 	
-	print(collision_mask)
 	
 	if first_change_label_emit:
 		change_label.emit(specs)
