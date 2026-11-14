@@ -75,14 +75,11 @@ size = Vector3(1, 2.559082, 3)
 
 [node name="Entities" type="Node" parent="." unique_id=1962065255]
 
-[node name="Enter_Door" parent="Entities" unique_id=508301085 instance=ExtResource("2_6iamk")]
-transform = Transform3D(-2.1855694e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.1855694e-08, -14.509853, -9.004066, -0.007069111)
-
 [node name="Exit_Door" parent="Entities" unique_id=2144935164 instance=ExtResource("2_6iamk")]
 transform = Transform3D(-2.1855694e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.1855694e-08, 14.496927, -9.004066, -0.007069111)
 
 [node name="ProtoController" parent="Entities" unique_id=267056480 instance=ExtResource("3_nsrm0")]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -5.098997, -8.893237, 2.965979)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -21.35542, -8.893237, -1.0340209)
 
 [node name="RigidBox" parent="Entities" unique_id=1309963547 groups=["rigid_boxes"] instance=ExtResource("5_sk5k4")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 10.854348, -3.8577409, 4.6352344)
@@ -133,6 +130,12 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, -3, 7)
 [node name="light_block4" parent="Lighting" unique_id=466384660 instance=ExtResource("8_s8va5")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, -3, 7)
 
+[node name="light_block5" parent="Lighting" unique_id=1825651052 instance=ExtResource("8_s8va5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20, -5.7577343, 0)
+
+[node name="light_block6" parent="Lighting" unique_id=1962465295 instance=ExtResource("8_s8va5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21, -5.7577343, 0)
+
 [node name="UI" type="Node" parent="." unique_id=420425141]
 
 [node name="BottomPanel" parent="UI" unique_id=686628392 instance=ExtResource("6_oc4kc")]
@@ -152,8 +155,6 @@ grow_vertical = 2
 text = "o"
 horizontal_alignment = 1
 vertical_alignment = 1
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=642651745]
 
 [connection signal="body_shape_entered" from="Entities/PressurePlate" to="Entities/Exit_Door" method="_on_pressure_plate_body_shape_entered"]
 [connection signal="body_shape_exited" from="Entities/PressurePlate" to="Entities/Exit_Door" method="_on_pressure_plate_body_shape_exited"]

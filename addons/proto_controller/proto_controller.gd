@@ -183,6 +183,15 @@ func try_grab_object() -> void:
 
 	if not object_grabber_shape_cast.is_colliding():
 		return
+		
+	# Prevent hoverboard on block
+	if raycast.get_collider():
+		for i in get_slide_collision_count():
+			var collision := get_slide_collision(i)
+			var collided_body = collision.get_collider()
+
+			if collided_body is RigidBody3D:
+				return
 
 	var collided = object_grabber_shape_cast.get_collider(0)
 
