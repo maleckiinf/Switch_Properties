@@ -126,6 +126,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.35542, -8.893237, 5.96597
 [node name="RigidBox" parent="Entities" unique_id=903340787 groups=["rigid_boxes"] instance=ExtResource("5_sk5k4")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -5.145653, -6.857741, 3.6352344)
 physics_material_override = SubResource("PhysicsMaterial_iav0o")
+specs = Array[String](["PINK", "PINK", "PINK"])
 
 [node name="RigidBox2" parent="Entities" unique_id=1309963547 groups=["rigid_boxes"] instance=ExtResource("5_sk5k4")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 5.854347, -6.857741, -6.364765)
@@ -159,10 +160,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, -3, 7)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, -3, 7)
 
 [node name="light_block5" parent="Lighting" unique_id=1825651052 instance=ExtResource("8_s8va5")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20, -5.7577343, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20, -5.3, 0)
 
 [node name="light_block6" parent="Lighting" unique_id=1962465295 instance=ExtResource("8_s8va5")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21, -5.7577343, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21, -5.3, 0)
 
 [node name="UI" type="Node" parent="." unique_id=420425141]
 
