@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b1vdfoaanx0jr"
-path.s3tc="res://.godot/imported/checker_lime_512x512.png-3fccde0eb0caa2f7ea222f90cd2e6f6b.s3tc.ctex"
+uid="uid://c1pvrdsf8p4gj"
+path.s3tc="res://.godot/imported/LPM_RPM.png-bde2c1fceac0cc56878f47f10cd5cce3.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://addons/godot-prototype-texture/PNG/checker_512x512/checker_lime_512x512.png"
-dest_files=["res://.godot/imported/checker_lime_512x512.png-3fccde0eb0caa2f7ea222f90cd2e6f6b.s3tc.ctex"]
+source_file="res://images/LPM_RPM.png"
+dest_files=["res://.godot/imported/LPM_RPM.png-bde2c1fceac0cc56878f47f10cd5cce3.s3tc.ctex"]
 
 [params]
 
