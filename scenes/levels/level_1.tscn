@@ -12,6 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://b2kjd7fnvycix" path="res://scenes/UI/bottom_panel.tscn" id="6_oc4kc"]
 [ext_resource type="PackedScene" uid="uid://6611wd1qsnkc" path="res://scenes/interactables/pressure_plate.tscn" id="7_oc4kc"]
 [ext_resource type="PackedScene" uid="uid://b68yfu12e8vxd" path="res://scenes/interactables/light_block.tscn" id="8_s8va5"]
+[ext_resource type="PackedScene" uid="uid://cmgcu4iwm13o6" path="res://scenes/interactables/next_level.tscn" id="11_dnkej"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_iav0o"]
 albedo_texture = ExtResource("3_excbq")
@@ -120,6 +121,9 @@ transform = Transform3D(-2.1842826e-08, 0, -0.49970546, 0, 0.49970546, 0, 0.4997
 [node name="Exit_Door" parent="Entities" unique_id=2144935164 groups=["doors"] instance=ExtResource("2_6iamk")]
 transform = Transform3D(-2.1855694e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.1855694e-08, 14.496927, -9.004066, -0.007069111)
 
+[node name="next_level" parent="Entities" unique_id=1372527718 instance=ExtResource("11_dnkej")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.928307, -7, 0)
+
 [node name="ProtoController" parent="Entities" unique_id=267056480 instance=ExtResource("3_nsrm0")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.35542, -8.893237, 5.965979)
 
@@ -161,9 +165,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, -3, 7)
 
 [node name="light_block5" parent="Lighting" unique_id=1825651052 instance=ExtResource("8_s8va5")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20, -5.3, 0)
-
-[node name="light_block6" parent="Lighting" unique_id=1962465295 instance=ExtResource("8_s8va5")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21, -5.3, 0)
 
 [node name="UI" type="Node" parent="." unique_id=420425141]
 
