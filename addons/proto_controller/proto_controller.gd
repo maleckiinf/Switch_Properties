@@ -300,7 +300,9 @@ func update_appearance() -> void:
 		
 		
 	#BOUNCE
-	if ob_bounce:
+	if ob_bounce == 2:
+		jump_velocity = 18.0
+	elif ob_bounce == 1:
 		jump_velocity = 9.0
 	else:
 		jump_velocity = 4.5

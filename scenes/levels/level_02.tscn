@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://c2nc1a44g2gjn"]
+[gd_scene format=3 uid="uid://w1c1fg1pikyd"]
 
 [ext_resource type="Script" uid="uid://cmubyw4gow56a" path="res://scripts/game.gd" id="1_km0xc"]
 [ext_resource type="PackedScene" uid="uid://dgo0pr8smftg" path="res://scenes/interactables/bunker_frame.tscn" id="2_n536o"]
@@ -22,6 +22,8 @@ uv1_scale = Vector3(-1, 1, 1)
 albedo_texture = ExtResource("5_4dr30")
 uv1_scale = Vector3(-1, 1, 1)
 
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_iav0o"]
+
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_nsrm0"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
 ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -38,13 +40,10 @@ ssil_enabled = true
 sdfgi_enabled = true
 glow_enabled = true
 
-[node name="LEVEL_1" type="Node3D" unique_id=399344112]
+[node name="LEVEL_2" type="Node3D" unique_id=399344112]
 script = ExtResource("1_km0xc")
 
 [node name="Environment" type="Node" parent="." unique_id=1775693312]
-
-[node name="Bunker Door" parent="Environment" unique_id=508301085 instance=ExtResource("2_n536o")]
-transform = Transform3D(-2.1855692e-08, 0, -0.49999976, 0, 0.49999976, 0, 0.49999976, 0, -2.1855692e-08, -14.4999695, -8.999992, 0)
 
 [node name="Poster" parent="Environment" unique_id=1738637746 instance=ExtResource("3_m2jhg")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21, -7, -3)
@@ -60,9 +59,9 @@ size = Vector3(50, 20, 30)
 metadata/_edit_lock_ = true
 
 [node name="subtraction" parent="Environment/outside_wall_block" unique_id=248252989 instance=ExtResource("6_dscar")]
-transform = Transform3D(0.9999678, 0, 0, 0, 0.9999678, 0, 0, 0, 0.9999678, 0, -4.4999027, 0)
+transform = Transform3D(0.9999678, 0, 0, 0, 0.9999678, 0, 0, 0, 0.9999678, 0, -4.7655776e-05, 0)
 operation = 2
-size = Vector3(28, 9, 28)
+size = Vector3(28, 18, 28)
 metadata/_edit_lock_ = true
 
 [node name="subtraction2" parent="Environment/outside_wall_block" unique_id=983294720 instance=ExtResource("6_dscar")]
@@ -87,136 +86,24 @@ transform = Transform3D(2.0488825, 0, 0, 0, 0.9993789, 0, 0, 0, 0.88357955, -14.
 operation = 2
 size = Vector3(1, 2.559082, 3)
 
-[node name="subtraction4" parent="Environment/outside_wall_block" unique_id=1954350162 instance=ExtResource("6_dscar")]
-transform = Transform3D(0.9999678, 0, 0, 0, 0.9999678, 0, 0, 0, 0.9999678, -3.6218204e-05, -6.499792, 8.499694)
-size = Vector3(28, 5, 13)
-metadata/_edit_lock_ = true
+[node name="Bunker Door" parent="Environment/outside_wall_block" unique_id=508301085 instance=ExtResource("2_n536o")]
+transform = Transform3D(-2.1842826e-08, 0, -0.49970546, 0, 0.49970546, 0, 0.49970546, 0, -2.1842826e-08, -14.486513, -8.979841, -0.0015006763)
 
-[node name="subtraction5" parent="Environment/outside_wall_block" unique_id=154572930 instance=ExtResource("6_dscar")]
-transform = Transform3D(0.9999678, 0, 0, 0, 0.9999678, 0, 0, 0, 0.9999678, -3.6218204e-05, -6.9997716, 8.49969)
-operation = 2
-size = Vector3(28, 4, 11)
-metadata/_edit_lock_ = true
+[node name="wall_block" parent="Environment/outside_wall_block" unique_id=682411604 instance=ExtResource("6_dscar")]
+transform = Transform3D(0.9993862, 0, 0, 0, 0.9993862, 0, 0, 0, 0.9993862, -4.9921374, -5.981589, 8.993137)
+size = Vector3(3, 1, 11)
 
-[node name="subtraction6" parent="Environment/outside_wall_block" unique_id=2048442926 instance=ExtResource("6_dscar")]
-transform = Transform3D(0.9999678, 0, 0, 0, 0.9999678, 0, 0, 0, 0.9999678, 10.999605, -6.4997597, -11.999652)
-size = Vector3(6, 5, 4)
-metadata/_edit_lock_ = true
+[node name="wall_block2" parent="Environment/outside_wall_block" unique_id=2142287054 instance=ExtResource("6_dscar")]
+transform = Transform3D(0.9994009, 0, 0, 0, 0.9994009, 0, 0, 0, 0.9994009, -4.9921346, 4.012503, -9.495886)
+size = Vector3(3, 1, 10)
 
-[node name="subtraction7" parent="Environment/outside_wall_block" unique_id=1088518075 instance=ExtResource("6_dscar")]
-transform = Transform3D(0.9999678, 0, 0, 0, 0.9999678, 0, 0, 0, 0.9999678, -3.4999237, -6.999764, 7.499722)
-size = Vector3(1, 4, 9)
-metadata/_edit_lock_ = true
+[node name="wall_block3" parent="Environment/outside_wall_block" unique_id=1196950862 instance=ExtResource("6_dscar")]
+transform = Transform3D(0.9994009, 0, 0, 0, 0.9994009, 0, 0, 0, 0.9994009, 4.0025625, -0.9845542, -9.495884)
+size = Vector3(3, 1, 10)
 
-[node name="subtraction8" parent="Environment/outside_wall_block" unique_id=1037987198 instance=ExtResource("6_dscar")]
-transform = Transform3D(0.9999678, 0, 0, 0, 0.9999678, 0, 0, 0, 0.9999678, -5.9998436, -6.9997487, 11.499588)
-size = Vector3(4, 4, 1)
-metadata/_edit_lock_ = true
-
-[node name="subtraction9" parent="Environment/outside_wall_block" unique_id=1091752794 instance=ExtResource("6_dscar")]
-transform = Transform3D(0.9999678, 0, 0, 0, 0.9999678, 0, 0, 0, 0.9999678, -8.4997635, -6.9997406, 8.499671)
-size = Vector3(1, 4, 7)
-metadata/_edit_lock_ = true
-
-[node name="subtraction10" parent="Environment/outside_wall_block" unique_id=1237315987 instance=ExtResource("6_dscar")]
-transform = Transform3D(0.9999678, 0, 0, 0, 0.9999678, 0, 0, 0, 0.9999678, -11.499655, -6.999732, 8.499658)
-size = Vector3(1, 4, 7)
-metadata/_edit_lock_ = true
-
-[node name="subtraction12" parent="Environment/outside_wall_block" unique_id=797239208 instance=ExtResource("6_dscar")]
-transform = Transform3D(0.9999678, 0, 0, 0, 0.9999678, 0, 0, 0, 0.9999678, -6.432645e-06, -10.999598, 8.499658)
-size = Vector3(24, 4, 9)
-metadata/_edit_lock_ = true
-
-[node name="subtraction11" parent="Environment/outside_wall_block" unique_id=977088001 instance=ExtResource("6_dscar")]
-transform = Transform3D(0.9999678, 0, 0, 0, 0.9999678, 0, 0, 0, 0.9999678, -9.999691, -10.49961, 8.499658)
-operation = 2
-size = Vector3(2, 5, 7)
-metadata/_edit_lock_ = true
-
-[node name="subtraction13" parent="Environment/outside_wall_block" unique_id=584773640 instance=ExtResource("6_dscar")]
-transform = Transform3D(0.9999678, 0, 0, 0, 0.86512166, 0.5014946, 0, -0.5014946, 0.86512166, -9.999686, -11.998047, 9.364781)
-size = Vector3(2, 1, 9)
-metadata/_edit_lock_ = true
-
-[node name="subtraction14" parent="Environment/outside_wall_block" unique_id=660094499 instance=ExtResource("6_dscar")]
-transform = Transform3D(0.9999678, 0, 0, 0, 0.9999678, 0, 0, 0, 0.9999678, 1.4999157, -6.9997544, 9.499648)
-size = Vector3(1, 4, 9)
-metadata/_edit_lock_ = true
-
-[node name="subtraction15" parent="Environment/outside_wall_block" unique_id=1726891104 instance=ExtResource("6_dscar")]
-transform = Transform3D(0.9999678, 0, 0, 0, 0.9999678, 0, 0, 0, 0.9999678, 5.4997864, -6.9997487, 7.4997067)
-size = Vector3(1, 4, 9)
-metadata/_edit_lock_ = true
-
-[node name="subtraction16" parent="Environment/outside_wall_block" unique_id=974757358 instance=ExtResource("6_dscar")]
-transform = Transform3D(0.9999678, 0, 0, 0, 0.9999678, 0, 0, 0, 0.9999678, 11.499583, -6.9997396, 7.499701)
-size = Vector3(1, 4, 9)
-metadata/_edit_lock_ = true
-
-[node name="subtraction17" parent="Environment/outside_wall_block" unique_id=1467611000 instance=ExtResource("6_dscar")]
-transform = Transform3D(0.9999678, 0, 0, 0, 0.9999678, 0, 0, 0, 0.9999678, 8.499676, -6.9997363, 11.499559)
-size = Vector3(1, 4, 1)
-metadata/_edit_lock_ = true
-
-[node name="subtraction18" parent="Environment/outside_wall_block" unique_id=350201068 instance=ExtResource("6_dscar")]
-transform = Transform3D(0.9999678, 0, 0, 0, 0.9999678, 0, 0, 0, 0.9999678, 8.499678, -6.9997325, 10.499594)
-size = Vector3(5, 4, 1)
-metadata/_edit_lock_ = true
-
-[node name="subtraction19" parent="Environment/outside_wall_block" unique_id=1697192330 instance=ExtResource("6_dscar")]
-transform = Transform3D(0.9999678, 0, 0, 0, 0.9999678, 0, 0, 0, 0.9999678, -9.530224e-06, -10.999594, 5.9997354)
-operation = 2
-size = Vector3(22, 4, 2)
-metadata/_edit_lock_ = true
-
-[node name="subtraction20" parent="Environment/outside_wall_block" unique_id=1105199295 instance=ExtResource("6_dscar")]
-transform = Transform3D(-4.370998e-08, -0.49998307, 0.86599606, 0, 0.86599606, 0.49998307, -0.9999678, 2.1854953e-08, -3.785389e-08, 8, -11.998, 5.865)
-size = Vector3(3, 1, 9)
-metadata/_edit_lock_ = true
-
-[node name="subtraction21" parent="Environment/outside_wall_block" unique_id=1586627514 instance=ExtResource("6_dscar")]
-transform = Transform3D(0.9999678, 0, 0, 0, 0.9999678, 0, 0, 0, 0.9999678, -1.4999607, -9.499639, 5.9997334)
-size = Vector3(15, 1, 2)
-metadata/_edit_lock_ = true
-
-[node name="subtraction22" parent="Environment/outside_wall_block" unique_id=978239994 instance=ExtResource("6_dscar")]
-transform = Transform3D(0.9999678, 0, 0, 0, 0.9999678, 0, 0, 0, 0.9999678, 5.9997635, -6.9997396, -11.999652)
-size = Vector3(4, 4, 4)
-metadata/_edit_lock_ = true
-
-[node name="subtraction23" parent="Environment/outside_wall_block" unique_id=1423904283 instance=ExtResource("6_dscar")]
-transform = Transform3D(0.9999678, 0, 0, 0, 0.9999678, 0, 0, 0, 0.9999678, 1.9998922, -7.49972, -11.999652)
-size = Vector3(4, 3, 4)
-metadata/_edit_lock_ = true
-
-[node name="subtraction24" parent="Environment/outside_wall_block" unique_id=1348621418 instance=ExtResource("6_dscar")]
-transform = Transform3D(0.9999678, 0, 0, 0, 0.9999678, 0, 0, 0, 0.9999678, -1.9999781, -7.9997015, -11.999652)
-size = Vector3(4, 2, 4)
-metadata/_edit_lock_ = true
-
-[node name="subtraction25" parent="Environment/outside_wall_block" unique_id=716333294 instance=ExtResource("6_dscar")]
-transform = Transform3D(0.9999678, 0, 0, 0, 0.9999678, 0, 0, 0, 0.9999678, -5.4998655, -8.499685, -11.999652)
-size = Vector3(3, 1, 4)
-metadata/_edit_lock_ = true
-
-[node name="subtraction26" parent="Environment/outside_wall_block" unique_id=1099802919 instance=ExtResource("6_dscar")]
-transform = Transform3D(0.9999678, 0, 0, 0, 0.9999678, 0, 0, 0, 0.9999678, -1.0000155, -6.999733, -0.5000197)
-operation = 2
-size = Vector3(4, 4, 7)
-metadata/_edit_lock_ = true
-
-[node name="subtraction27" parent="Environment/outside_wall_block" unique_id=179108047 instance=ExtResource("6_dscar")]
-transform = Transform3D(0.9999678, 0, 0, 0, 0.9999678, 0, 0, 0, 0.9999678, -9.499738, -4.4998045, 2.4998827)
-operation = 2
-size = Vector3(9, 1, 1)
-metadata/_edit_lock_ = true
-
-[node name="subtraction28" parent="Environment/outside_wall_block" unique_id=583036843 instance=ExtResource("6_dscar")]
-transform = Transform3D(0.9999678, 0, 0, 0, 0.9999678, 0, 0, 0, 0.9999678, 8.499681, -4.4997997, 2.4998827)
-operation = 2
-size = Vector3(11, 1, 1)
-metadata/_edit_lock_ = true
+[node name="wall_block4" parent="Environment/outside_wall_block" unique_id=159399325 instance=ExtResource("6_dscar")]
+transform = Transform3D(0.99938506, 0, 0, 0, 0.99938506, 0, 0, 0, 0.99938506, 4.0025597, -2.9833605, 8.993135)
+size = Vector3(3, 1, 11)
 
 [node name="Entities" type="Node" parent="." unique_id=1962065255]
 
@@ -229,19 +116,21 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.928307, -7, 0)
 [node name="ProtoController" parent="Entities" unique_id=267056480 instance=ExtResource("9_m2te4")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.35542, -8.893237, 5.965979)
 
+[node name="RigidBox" parent="Entities" unique_id=903340787 groups=["rigid_boxes"] instance=ExtResource("11_lky54")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -5.145653, -6.857741, -6.3647656)
+physics_material_override = SubResource("PhysicsMaterial_iav0o")
+specs = Array[String](["BOUNCE", "PINK", "-"])
+
+[node name="RigidBox2" parent="Entities" unique_id=1309963547 groups=["rigid_boxes"] instance=ExtResource("11_lky54")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 3.8543472, 0.14225912, -5.364765)
+physics_material_override = SubResource("PhysicsMaterial_iav0o")
+specs = Array[String](["-", "BOUNCE", "GLOW"])
+
 [node name="PressurePlate" parent="Entities" unique_id=2020106939 groups=["pressure_plates"] instance=ExtResource("10_kxbgd")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -4, 10)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 4.5, -6)
 
 [node name="PressurePlate2" parent="Entities" unique_id=1716459305 groups=["pressure_plates"] instance=ExtResource("10_kxbgd")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, -9, 9)
-
-[node name="Box" parent="Entities" unique_id=1245967893 groups=["rigid_boxes"] instance=ExtResource("11_lky54")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.311822, -6.0199203, -5.536843)
-specs = Array[String](["PINK", "GLOW", "GLOW"])
-
-[node name="Box2" parent="Entities" unique_id=1309963547 groups=["rigid_boxes"] instance=ExtResource("11_lky54")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.753566, -8.457823, 9.080679)
-specs = Array[String](["BOUNCE", "-", "GLOW"])
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, -5.5, 5)
 
 [node name="Lighting" type="Node" parent="." unique_id=1305953467]
 
@@ -253,19 +142,22 @@ shadow_enabled = true
 environment = SubResource("Environment_x42e6")
 
 [node name="light_block" parent="Lighting" unique_id=862725647 instance=ExtResource("12_ies7a")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, -3, -8)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, -5, -6)
 
 [node name="light_block2" parent="Lighting" unique_id=437486550 instance=ExtResource("12_ies7a")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, -3, -8)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, -6)
 
 [node name="light_block3" parent="Lighting" unique_id=1046539177 instance=ExtResource("12_ies7a")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, -3, 7)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, -7, 5)
+
+[node name="light_block4" parent="Lighting" unique_id=466384660 instance=ExtResource("12_ies7a")]
+transform = Transform3D(1, 0, 0, 0, 0.42000002, 0, 0, 0, 1, -5, -8, 5)
 
 [node name="light_block5" parent="Lighting" unique_id=1825651052 instance=ExtResource("12_ies7a")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20, -5.3, 0)
 
-[node name="light_block4" parent="Lighting" unique_id=1623439787 instance=ExtResource("12_ies7a")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, -3, 7)
+[node name="light_block6" parent="Lighting" unique_id=1826570183 instance=ExtResource("12_ies7a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 6, 5)
 
 [node name="UI" type="Node" parent="." unique_id=420425141]
 
