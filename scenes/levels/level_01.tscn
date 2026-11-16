@@ -1,25 +1,25 @@
 [gd_scene format=3 uid="uid://dkynfwklyycu4"]
 
-[ext_resource type="PackedScene" uid="uid://bi2h7xu8ecfpb" path="res://scenes/interactables/wall_block.tscn" id="1_ksju7"]
-[ext_resource type="Script" uid="uid://cmubyw4gow56a" path="res://scripts/game.gd" id="1_x42e6"]
-[ext_resource type="PackedScene" uid="uid://biyxpmolrmmn0" path="res://scenes/interactables/bunker_door.tscn" id="2_6iamk"]
-[ext_resource type="PackedScene" uid="uid://bni2ibwwbcp4e" path="res://scenes/interactables/poster.tscn" id="2_qxy0u"]
-[ext_resource type="Texture2D" uid="uid://cfe5ksdarjit7" path="res://images/wsad.png" id="3_excbq"]
-[ext_resource type="PackedScene" uid="uid://bs72ogkvdd7d6" path="res://scenes/player/proto_controller.tscn" id="3_nsrm0"]
-[ext_resource type="Texture2D" uid="uid://c1pvrdsf8p4gj" path="res://images/LPM_RPM.png" id="3_qxy0u"]
-[ext_resource type="PackedScene" uid="uid://cyuq0is1d3de2" path="res://scenes/objects/box.tscn" id="5_sk5k4"]
-[ext_resource type="PackedScene" uid="uid://dgo0pr8smftg" path="res://scenes/interactables/bunker_frame.tscn" id="6_iav0o"]
-[ext_resource type="PackedScene" uid="uid://b2kjd7fnvycix" path="res://scenes/UI/bottom_panel.tscn" id="6_oc4kc"]
-[ext_resource type="PackedScene" uid="uid://6611wd1qsnkc" path="res://scenes/interactables/pressure_plate.tscn" id="7_oc4kc"]
-[ext_resource type="PackedScene" uid="uid://b68yfu12e8vxd" path="res://scenes/interactables/light_block.tscn" id="8_s8va5"]
-[ext_resource type="PackedScene" uid="uid://cmgcu4iwm13o6" path="res://scenes/interactables/next_level.tscn" id="11_dnkej"]
+[ext_resource type="Script" uid="uid://cmubyw4gow56a" path="res://scripts/game.gd" id="1_tyxjt"]
+[ext_resource type="PackedScene" uid="uid://bni2ibwwbcp4e" path="res://scenes/interactables/poster.tscn" id="2_07lms"]
+[ext_resource type="Texture2D" uid="uid://cfe5ksdarjit7" path="res://images/wsad.png" id="3_gi8m4"]
+[ext_resource type="Texture2D" uid="uid://c1pvrdsf8p4gj" path="res://images/LPM_RPM.png" id="4_cwffn"]
+[ext_resource type="PackedScene" uid="uid://bi2h7xu8ecfpb" path="res://scenes/interactables/wall_block.tscn" id="5_e6lid"]
+[ext_resource type="PackedScene" uid="uid://dgo0pr8smftg" path="res://scenes/interactables/bunker_frame.tscn" id="6_3g50r"]
+[ext_resource type="PackedScene" uid="uid://biyxpmolrmmn0" path="res://scenes/interactables/bunker_door.tscn" id="7_iu1m7"]
+[ext_resource type="PackedScene" uid="uid://cmgcu4iwm13o6" path="res://scenes/interactables/next_level.tscn" id="8_cywot"]
+[ext_resource type="PackedScene" uid="uid://bs72ogkvdd7d6" path="res://scenes/player/proto_controller.tscn" id="9_vrcmr"]
+[ext_resource type="PackedScene" uid="uid://cyuq0is1d3de2" path="res://scenes/objects/box.tscn" id="10_svp4f"]
+[ext_resource type="PackedScene" uid="uid://6611wd1qsnkc" path="res://scenes/interactables/pressure_plate.tscn" id="11_1b0o8"]
+[ext_resource type="PackedScene" uid="uid://b68yfu12e8vxd" path="res://scenes/interactables/light_block.tscn" id="12_w4kkx"]
+[ext_resource type="PackedScene" uid="uid://b2kjd7fnvycix" path="res://scenes/UI/bottom_panel.tscn" id="13_mhiu8"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_iav0o"]
-albedo_texture = ExtResource("3_excbq")
+albedo_texture = ExtResource("3_gi8m4")
 uv1_scale = Vector3(-1, 1, 1)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_excbq"]
-albedo_texture = ExtResource("3_qxy0u")
+albedo_texture = ExtResource("4_cwffn")
 uv1_scale = Vector3(-1, 1, 1)
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_iav0o"]
@@ -41,36 +41,36 @@ sdfgi_enabled = true
 glow_enabled = true
 
 [node name="LEVEL_1" type="Node3D" unique_id=399344112]
-script = ExtResource("1_x42e6")
+script = ExtResource("1_tyxjt")
 
 [node name="Environment" type="Node" parent="." unique_id=1775693312]
 
-[node name="Poster" parent="Environment" unique_id=1738637746 instance=ExtResource("2_qxy0u")]
+[node name="Poster" parent="Environment" unique_id=1738637746 instance=ExtResource("2_07lms")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21, -7, -3)
 material_override = SubResource("StandardMaterial3D_iav0o")
 
-[node name="Poster2" parent="Environment" unique_id=180950111 instance=ExtResource("2_qxy0u")]
+[node name="Poster2" parent="Environment" unique_id=180950111 instance=ExtResource("2_07lms")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17, -7, -3)
 material_override = SubResource("StandardMaterial3D_excbq")
 
-[node name="outside_wall_block" parent="Environment" unique_id=1605564672 instance=ExtResource("1_ksju7")]
+[node name="outside_wall_block" parent="Environment" unique_id=1605564672 instance=ExtResource("5_e6lid")]
 transform = Transform3D(1.000589, 0, 0, 0, 1.000589, 0, 0, 0, 1.000589, -0.0049250126, -0.014863014, 0.0015015602)
 size = Vector3(50, 20, 30)
 metadata/_edit_lock_ = true
 
-[node name="subtraction" parent="Environment/outside_wall_block" unique_id=248252989 instance=ExtResource("1_ksju7")]
+[node name="subtraction" parent="Environment/outside_wall_block" unique_id=248252989 instance=ExtResource("5_e6lid")]
 transform = Transform3D(0.9999678, 0, 0, 0, 0.9999678, 0, 0, 0, 0.9999678, 0, -4.4999027, 0)
 operation = 2
 size = Vector3(28, 9, 28)
 metadata/_edit_lock_ = true
 
-[node name="subtraction2" parent="Environment/outside_wall_block" unique_id=983294720 instance=ExtResource("1_ksju7")]
+[node name="subtraction2" parent="Environment/outside_wall_block" unique_id=983294720 instance=ExtResource("5_e6lid")]
 transform = Transform3D(0.9999678, 0, 0, 0, 0.9999678, 0, 0, 0, 0.9999678, -19.000244, -6.9997597, 1.9999341)
 operation = 2
 size = Vector3(8, 4, 10)
 metadata/_edit_lock_ = true
 
-[node name="subtraction3" parent="Environment/outside_wall_block" unique_id=343122049 instance=ExtResource("1_ksju7")]
+[node name="subtraction3" parent="Environment/outside_wall_block" unique_id=343122049 instance=ExtResource("5_e6lid")]
 transform = Transform3D(0.9999678, 0, 0, 0, 0.9999678, 0, 0, 0, 0.9999678, 19.477356, -6.999765, -7.7440376e-07)
 operation = 2
 size = Vector3(9, 4, 6)
@@ -86,60 +86,60 @@ transform = Transform3D(2.0488825, 0, 0, 0, 0.9993789, 0, 0, 0, 0.88357955, -14.
 operation = 2
 size = Vector3(1, 2.559082, 3)
 
-[node name="subtraction4" parent="Environment/outside_wall_block" unique_id=1954350162 instance=ExtResource("1_ksju7")]
+[node name="subtraction4" parent="Environment/outside_wall_block" unique_id=1954350162 instance=ExtResource("5_e6lid")]
 transform = Transform3D(0.9999678, 0, 0, 0, 0.9999678, 0, 0, 0, 0.9999678, 5.999777, -12.999599, 7.4997544)
 size = Vector3(18, 8, 15)
 metadata/_edit_lock_ = true
 
-[node name="subtraction5" parent="Environment/outside_wall_block" unique_id=2115874501 instance=ExtResource("1_ksju7")]
+[node name="subtraction5" parent="Environment/outside_wall_block" unique_id=2115874501 instance=ExtResource("5_e6lid")]
 transform = Transform3D(0.9999678, 0, 0, 0, 0.9999678, 0, 0, 0, 0.9999678, 3.9998555, -10.999677, 7.499753)
 operation = 2
 size = Vector3(12, 6, 13)
 metadata/_edit_lock_ = true
 
-[node name="subtraction6" parent="Environment/outside_wall_block" unique_id=1905072361 instance=ExtResource("1_ksju7")]
+[node name="subtraction6" parent="Environment/outside_wall_block" unique_id=1905072361 instance=ExtResource("5_e6lid")]
 transform = Transform3D(0.9999678, 0, 0, 0, 0.9999678, 0, 0, 0, 0.9999678, 4.999812, -12.9995985, 8.999704)
 size = Vector3(4, 8, 4)
 metadata/_edit_lock_ = true
 
-[node name="subtraction7" parent="Environment/outside_wall_block" unique_id=909527782 instance=ExtResource("1_ksju7")]
+[node name="subtraction7" parent="Environment/outside_wall_block" unique_id=909527782 instance=ExtResource("5_e6lid")]
 transform = Transform3D(0.9999678, 0, 0, 0, 0.9999678, 0, 0, 0, 0.9999678, 11.999595, -10.999677, 11.9996)
 operation = 2
 size = Vector3(4, 6, 4)
 metadata/_edit_lock_ = true
 
-[node name="subtraction8" parent="Environment/outside_wall_block" unique_id=862024377 instance=ExtResource("1_ksju7")]
+[node name="subtraction8" parent="Environment/outside_wall_block" unique_id=862024377 instance=ExtResource("5_e6lid")]
 transform = Transform3D(0.9999678, 0, 0, 0, 0.49847052, 0.8668668, 0, -0.8668668, 0.49847052, 11.99959, -8.365002, 5.991795)
 operation = 2
 size = Vector3(4, 14, 4)
 
-[node name="Bunker Door" parent="Environment/outside_wall_block" unique_id=508301085 instance=ExtResource("6_iav0o")]
+[node name="Bunker Door" parent="Environment/outside_wall_block" unique_id=508301085 instance=ExtResource("6_3g50r")]
 transform = Transform3D(-2.1842826e-08, 0, -0.49970546, 0, 0.49970546, 0, 0.49970546, 0, -2.1842826e-08, -14.486513, -8.979841, -0.0015006763)
 
 [node name="Entities" type="Node" parent="." unique_id=1962065255]
 
-[node name="Exit_Door" parent="Entities" unique_id=2144935164 groups=["doors"] instance=ExtResource("2_6iamk")]
+[node name="Exit_Door" parent="Entities" unique_id=2144935164 groups=["doors"] instance=ExtResource("7_iu1m7")]
 transform = Transform3D(-2.1855694e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.1855694e-08, 14.496927, -9.004066, -0.007069111)
 
-[node name="next_level" parent="Entities" unique_id=1372527718 instance=ExtResource("11_dnkej")]
+[node name="next_level" parent="Entities" unique_id=1372527718 instance=ExtResource("8_cywot")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.928307, -7, 0)
 
-[node name="ProtoController" parent="Entities" unique_id=267056480 instance=ExtResource("3_nsrm0")]
+[node name="ProtoController" parent="Entities" unique_id=267056480 instance=ExtResource("9_vrcmr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.35542, -8.893237, 5.965979)
 
-[node name="RigidBox" parent="Entities" unique_id=903340787 groups=["rigid_boxes"] instance=ExtResource("5_sk5k4")]
+[node name="RigidBox" parent="Entities" unique_id=903340787 groups=["rigid_boxes"] instance=ExtResource("10_svp4f")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -5.145653, -6.857741, 3.6352344)
 physics_material_override = SubResource("PhysicsMaterial_iav0o")
 specs = Array[String](["PINK", "PINK", "PINK"])
 
-[node name="RigidBox2" parent="Entities" unique_id=1309963547 groups=["rigid_boxes"] instance=ExtResource("5_sk5k4")]
+[node name="RigidBox2" parent="Entities" unique_id=1309963547 groups=["rigid_boxes"] instance=ExtResource("10_svp4f")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 5.854347, -6.857741, -6.364765)
 physics_material_override = SubResource("PhysicsMaterial_iav0o")
 
-[node name="PressurePlate" parent="Entities" unique_id=2020106939 groups=["pressure_plates"] instance=ExtResource("7_oc4kc")]
+[node name="PressurePlate" parent="Entities" unique_id=2020106939 groups=["pressure_plates"] instance=ExtResource("11_1b0o8")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, -9, -6)
 
-[node name="PressurePlate2" parent="Entities" unique_id=1716459305 groups=["pressure_plates"] instance=ExtResource("7_oc4kc")]
+[node name="PressurePlate2" parent="Entities" unique_id=1716459305 groups=["pressure_plates"] instance=ExtResource("11_1b0o8")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, -9, 9)
 
 [node name="Lighting" type="Node" parent="." unique_id=1305953467]
@@ -151,24 +151,24 @@ shadow_enabled = true
 [node name="WorldEnvironment" type="WorldEnvironment" parent="Lighting" unique_id=2060342592]
 environment = SubResource("Environment_x42e6")
 
-[node name="light_block" parent="Lighting" unique_id=862725647 instance=ExtResource("8_s8va5")]
+[node name="light_block" parent="Lighting" unique_id=862725647 instance=ExtResource("12_w4kkx")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, -3, -8)
 
-[node name="light_block2" parent="Lighting" unique_id=437486550 instance=ExtResource("8_s8va5")]
+[node name="light_block2" parent="Lighting" unique_id=437486550 instance=ExtResource("12_w4kkx")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, -3, -8)
 
-[node name="light_block3" parent="Lighting" unique_id=1046539177 instance=ExtResource("8_s8va5")]
+[node name="light_block3" parent="Lighting" unique_id=1046539177 instance=ExtResource("12_w4kkx")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, -3, 7)
 
-[node name="light_block4" parent="Lighting" unique_id=466384660 instance=ExtResource("8_s8va5")]
+[node name="light_block4" parent="Lighting" unique_id=466384660 instance=ExtResource("12_w4kkx")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, -3, 7)
 
-[node name="light_block5" parent="Lighting" unique_id=1825651052 instance=ExtResource("8_s8va5")]
+[node name="light_block5" parent="Lighting" unique_id=1825651052 instance=ExtResource("12_w4kkx")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20, -5.3, 0)
 
 [node name="UI" type="Node" parent="." unique_id=420425141]
 
-[node name="BottomPanel" parent="UI" unique_id=686628392 instance=ExtResource("6_oc4kc")]
+[node name="BottomPanel" parent="UI" unique_id=686628392 instance=ExtResource("13_mhiu8")]
 
 [node name="Aim" type="Label" parent="UI" unique_id=1143344548]
 anchors_preset = 8

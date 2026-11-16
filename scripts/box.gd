@@ -59,9 +59,12 @@ func _ready() -> void:
 		
 	for i in specs:
 		update_spec(i)
+		
+	print("update_spec")
 
 	# Apply initial properties
 	update_appearance()
+	print("update_appearance")
 
 
 # ==================================================
