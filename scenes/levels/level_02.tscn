@@ -2,9 +2,9 @@
 
 [ext_resource type="Script" uid="uid://cmubyw4gow56a" path="res://scripts/game.gd" id="1_km0xc"]
 [ext_resource type="PackedScene" uid="uid://dgo0pr8smftg" path="res://scenes/interactables/bunker_frame.tscn" id="2_n536o"]
+[ext_resource type="Texture2D" uid="uid://xdssc84ffe2o" path="res://images/1_2_3.png" id="3_km0xc"]
 [ext_resource type="PackedScene" uid="uid://bni2ibwwbcp4e" path="res://scenes/interactables/poster.tscn" id="3_m2jhg"]
-[ext_resource type="Texture2D" uid="uid://cfe5ksdarjit7" path="res://images/wsad.png" id="4_q6ljp"]
-[ext_resource type="Texture2D" uid="uid://c1pvrdsf8p4gj" path="res://images/LPM_RPM.png" id="5_4dr30"]
+[ext_resource type="Texture2D" uid="uid://dl0okxyq73u08" path="res://images/Q_E.png" id="4_n536o"]
 [ext_resource type="PackedScene" uid="uid://bi2h7xu8ecfpb" path="res://scenes/interactables/wall_block.tscn" id="6_dscar"]
 [ext_resource type="PackedScene" uid="uid://biyxpmolrmmn0" path="res://scenes/interactables/bunker_door.tscn" id="7_01hg1"]
 [ext_resource type="PackedScene" uid="uid://cmgcu4iwm13o6" path="res://scenes/interactables/next_level.tscn" id="8_v5pqk"]
@@ -14,13 +14,11 @@
 [ext_resource type="PackedScene" uid="uid://b68yfu12e8vxd" path="res://scenes/interactables/light_block.tscn" id="12_ies7a"]
 [ext_resource type="PackedScene" uid="uid://b2kjd7fnvycix" path="res://scenes/UI/bottom_panel.tscn" id="13_kx1rr"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_iav0o"]
-albedo_texture = ExtResource("4_q6ljp")
-uv1_scale = Vector3(-1, 1, 1)
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_m2jhg"]
+albedo_texture = ExtResource("3_km0xc")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_excbq"]
-albedo_texture = ExtResource("5_4dr30")
-uv1_scale = Vector3(-1, 1, 1)
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_q6ljp"]
+albedo_texture = ExtResource("4_n536o")
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_iav0o"]
 
@@ -46,12 +44,12 @@ script = ExtResource("1_km0xc")
 [node name="Environment" type="Node" parent="." unique_id=1775693312]
 
 [node name="Poster" parent="Environment" unique_id=1738637746 instance=ExtResource("3_m2jhg")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21, -7, -3)
-material_override = SubResource("StandardMaterial3D_iav0o")
+transform = Transform3D(-1, 0, 0, 0, -1, 0, 0, 0, -1, -21, -7, -3)
+material_override = SubResource("StandardMaterial3D_m2jhg")
 
 [node name="Poster2" parent="Environment" unique_id=180950111 instance=ExtResource("3_m2jhg")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17, -7, -3)
-material_override = SubResource("StandardMaterial3D_excbq")
+transform = Transform3D(-1, 0, 0, 0, -1, 0, 0, 0, -1, -17, -7, -3)
+material_override = SubResource("StandardMaterial3D_q6ljp")
 
 [node name="outside_wall_block" parent="Environment" unique_id=1605564672 instance=ExtResource("6_dscar")]
 transform = Transform3D(1.000589, 0, 0, 0, 1.000589, 0, 0, 0, 1.000589, -0.0049250126, -0.014863014, 0.0015015602)
@@ -98,7 +96,7 @@ transform = Transform3D(0.9994009, 0, 0, 0, 0.9994009, 0, 0, 0, 0.9994009, -4.99
 size = Vector3(3, 1, 10)
 
 [node name="wall_block3" parent="Environment/outside_wall_block" unique_id=1196950862 instance=ExtResource("6_dscar")]
-transform = Transform3D(0.9994009, 0, 0, 0, 0.9994009, 0, 0, 0, 0.9994009, 4.0025625, -0.9845542, -9.495884)
+transform = Transform3D(0.99940085, 0, 0, 0, 0.99940085, 0, 0, 0, 0.99940085, 4.002562, -0.9845541, -10.495295)
 size = Vector3(3, 1, 10)
 
 [node name="wall_block4" parent="Environment/outside_wall_block" unique_id=159399325 instance=ExtResource("6_dscar")]
@@ -122,7 +120,7 @@ physics_material_override = SubResource("PhysicsMaterial_iav0o")
 specs = Array[String](["BOUNCE", "PINK", "-"])
 
 [node name="RigidBox2" parent="Entities" unique_id=1309963547 groups=["rigid_boxes"] instance=ExtResource("11_lky54")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 3.8543472, 0.14225912, -5.364765)
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 3.8543472, 0.14225912, -6.364765)
 physics_material_override = SubResource("PhysicsMaterial_iav0o")
 specs = Array[String](["-", "BOUNCE", "GLOW"])
 
