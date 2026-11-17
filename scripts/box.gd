@@ -127,6 +127,9 @@ func update_appearance() -> void:
 	# Update material
 	var material := mesh.get_surface_override_material(0)
 
+	print("bounce = ", physics_material_override.bounce)
+	print("absorbent = ", physics_material_override.absorbent)
+	print("bounce = ", physics_material_override.bounce)
 	# PINK
 	if ob_pink == 1:
 		ob_color = Color.PINK
@@ -153,6 +156,7 @@ func update_appearance() -> void:
 	# GRAVITY
 	if ob_gravity:
 		custom_integrator = true
+		
 	else:
 		custom_integrator = false
 		
