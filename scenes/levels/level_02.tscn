@@ -20,6 +20,8 @@ albedo_texture = ExtResource("3_km0xc")
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_q6ljp"]
 albedo_texture = ExtResource("4_n536o")
 
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_km0xc"]
+
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_iav0o"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_nsrm0"]
@@ -116,7 +118,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.35542, -8.893237, 5.96597
 
 [node name="RigidBox" parent="Entities" unique_id=903340787 groups=["rigid_boxes"] instance=ExtResource("11_lky54")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -5.145653, -6.857741, -6.3647656)
-physics_material_override = SubResource("PhysicsMaterial_iav0o")
+physics_material_override = SubResource("PhysicsMaterial_km0xc")
 specs = Array[String](["BOUNCE", "PINK", "-"])
 
 [node name="RigidBox2" parent="Entities" unique_id=1309963547 groups=["rigid_boxes"] instance=ExtResource("11_lky54")]

@@ -20,7 +20,13 @@ albedo_texture = ExtResource("3_d1lip")
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_q6ljp"]
 albedo_texture = ExtResource("4_o3rdr")
 
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_tdc43"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_03g8n"]
+
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_iav0o"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_d1lip"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_nsrm0"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -116,12 +122,12 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.35542, -8.893237, 5.96597
 
 [node name="RigidBox" parent="Entities" unique_id=903340787 groups=["rigid_boxes"] instance=ExtResource("10_fy4m5")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -5.145653, -6.857741, -6.3647656)
-physics_material_override = SubResource("PhysicsMaterial_iav0o")
+physics_material_override = SubResource("PhysicsMaterial_tdc43")
 specs = Array[String](["GRAVITY", "-", "-"])
 
 [node name="RigidBox2" parent="Entities" unique_id=1309963547 groups=["rigid_boxes"] instance=ExtResource("10_fy4m5")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 3.8543472, -6.857741, -6.364765)
-physics_material_override = SubResource("PhysicsMaterial_iav0o")
+physics_material_override = SubResource("PhysicsMaterial_03g8n")
 
 [node name="RigidBox3" parent="Entities" unique_id=429664889 groups=["rigid_boxes"] instance=ExtResource("10_fy4m5")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -1.1456528, 3.1422591, 5.6352344)
@@ -142,8 +148,8 @@ transform = Transform3D(-1, 8.742278e-08, 0, 8.742278e-08, 1, -8.742278e-08, -7.
 
 [node name="RigidBox4" parent="Entities" unique_id=1848999938 groups=["rigid_boxes"] instance=ExtResource("10_fy4m5")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -5.145653, -6.857741, 6.6352344)
-physics_material_override = SubResource("PhysicsMaterial_iav0o")
-specs = Array[String](["GRAVITY", "-", "-"])
+physics_material_override = SubResource("PhysicsMaterial_d1lip")
+specs = Array[String](["-", "BOUNCE", "-"])
 
 [node name="Lighting" type="Node" parent="." unique_id=1305953467]
 
