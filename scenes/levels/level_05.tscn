@@ -103,12 +103,23 @@ transform = Transform3D(0.999411, 0, 0, 0, 0.999411, 0, 0, 0, 0.999411, 8.000212
 size = Vector3(3, 5, 3)
 
 [node name="wall_block5" parent="Environment/outside_wall_block" unique_id=872903845 instance=ExtResource("5_lr2mp")]
-transform = Transform3D(0.99938256, 0, 0, 0, 0.99938256, 0, 0, 0, 0.99938256, 0.00030645728, 0.0003074985, 0.00030591944)
+transform = Transform3D(0.9993825, 0, 0, 0, 0.9993825, 0, 0, 0, 0.9993825, 0.034977846, 0.06182307, 0.011828577)
 size = Vector3(2, 18, 28)
 
 [node name="wall_block7" parent="Environment/outside_wall_block" unique_id=825268114 instance=ExtResource("5_lr2mp")]
 transform = Transform3D(0.9999678, 0, 0, 0, -4.3710678e-08, 0.4319871, 0, -0.9999678, -1.8882501e-08, 0.006761145, -3.982783, -0.0015006763)
 size = Vector3(28, 2, 1)
+
+[node name="CSGCylinder3D" type="CSGCylinder3D" parent="Environment/outside_wall_block" unique_id=1132259748]
+transform = Transform3D(0.052428707, -0.9986217, 0, 0.9986217, 0.052428707, 0, 0, 0, 0.9999941, 0.499313, -7.521668, 0)
+operation = 2
+height = 5.0
+
+[node name="CSGCylinder3D2" type="CSGCylinder3D" parent="Environment/outside_wall_block" unique_id=228600748]
+transform = Transform3D(0.052428707, -0.9986121, 0, 0.9986121, 0.052428707, 0, 0, 0, 0.9999749, 0.49931276, -7.128947, 3.9976447)
+operation = 2
+radius = 1.9072266
+height = 5.0
 
 [node name="Entities" type="Node" parent="." unique_id=1962065255]
 
@@ -124,7 +135,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.35542, -8.893237, 5.96597
 [node name="RigidBox" parent="Entities" unique_id=903340787 groups=["rigid_boxes"] instance=ExtResource("10_fy4m5")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -5.145653, -6.857741, -6.3647656)
 physics_material_override = SubResource("PhysicsMaterial_iav0o")
-specs = Array[String](["BOUNCE", "-", "-"])
 
 [node name="RigidBox2" parent="Entities" unique_id=1309963547 groups=["rigid_boxes"] instance=ExtResource("10_fy4m5")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 3.8543472, 0.14225912, -6.364765)
