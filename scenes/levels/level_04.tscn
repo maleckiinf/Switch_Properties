@@ -104,18 +104,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.928307, -7, 0)
 [node name="ProtoController" parent="Entities" unique_id=267056480 instance=ExtResource("9_vdcoq")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.35542, -8.893237, 5.965979)
 
-[node name="PressurePlate_north" parent="Entities" unique_id=1716459305 instance=ExtResource("11_tdc43")]
-transform = Transform3D(-1, 8.742278e-08, 0, -8.742278e-08, -1, 0, 0, 0, 1, 0, 1, 0)
-
-[node name="PressurePlate_east" parent="Entities" unique_id=834209156 instance=ExtResource("11_tdc43")]
-transform = Transform3D(1.9106855e-15, 4.371139e-08, -1, 1, -4.371139e-08, 0, -4.371139e-08, -1, -4.371139e-08, 0, -4, 14)
-
-[node name="PressurePlate_south" parent="Entities" unique_id=595764646 instance=ExtResource("11_tdc43")]
-transform = Transform3D(-1, 8.742278e-08, 0, 8.742278e-08, 1, -8.742278e-08, -7.642742e-15, -8.742278e-08, -1, 0, -9, 0)
-
-[node name="PressurePlate_west" parent="Entities" unique_id=2040197906 instance=ExtResource("11_tdc43")]
-transform = Transform3D(1.9106855e-15, 4.371139e-08, 1, 1, -4.371139e-08, 0, 4.371139e-08, 1, -4.371139e-08, 0, -4, -14)
-
 [node name="RigidBox1" parent="Entities" unique_id=903340787 groups=["rigid_boxes"] instance=ExtResource("10_fy4m5")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -5.145653, -6.857741, -6.3647656)
 physics_material_override = SubResource("PhysicsMaterial_tdc43")
@@ -134,6 +122,18 @@ specs = Array[String](["-", "BOUNCE", "-"])
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 3.8543472, -6.857741, 5.635235)
 physics_material_override = SubResource("PhysicsMaterial_o3rdr")
 
+[node name="PressurePlate_north" parent="Entities" unique_id=1716459305 groups=["pressure_plates"] instance=ExtResource("11_tdc43")]
+transform = Transform3D(1, 0, 0, 0, -1, 8.742278e-08, 0, -8.742278e-08, -1, 0, 1, 0)
+
+[node name="PressurePlate_east" parent="Entities" unique_id=484144365 groups=["pressure_plates"] instance=ExtResource("11_tdc43")]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, -4, 14)
+
+[node name="PressurePlate_south" parent="Entities" unique_id=1383981307 groups=["pressure_plates"] instance=ExtResource("11_tdc43")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -9, 0)
+
+[node name="PressurePlate_west" parent="Entities" unique_id=1374157513 groups=["pressure_plates"] instance=ExtResource("11_tdc43")]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, -4, -14)
+
 [node name="Lighting" type="Node" parent="." unique_id=1305953467]
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="Lighting" unique_id=143487372]
@@ -147,16 +147,16 @@ environment = SubResource("Environment_x42e6")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20, -5.3, 0)
 
 [node name="light_block1" parent="Lighting" unique_id=1826570183 instance=ExtResource("12_mf6hd")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, -3, 5)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, -2, 5)
 
 [node name="light_block2" parent="Lighting" unique_id=862725647 instance=ExtResource("12_mf6hd")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, -3, -5)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, -2, -5)
 
 [node name="light_block3" parent="Lighting" unique_id=1407017934 instance=ExtResource("12_mf6hd")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, -3, 5)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, -2, 5)
 
 [node name="light_block4" parent="Lighting" unique_id=1634508827 instance=ExtResource("12_mf6hd")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, -3, -5)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, -2, -5)
 
 [node name="UI" type="Node" parent="." unique_id=420425141]
 

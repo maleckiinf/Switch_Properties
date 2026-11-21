@@ -97,12 +97,7 @@ size = Vector3(0.2, 18, 28)
 transform = Transform3D(0.9999865, 0, 0, 0, 0.9999865, 0, 0, 0, 0.9999865, 0.102776825, -7.5665584, -0.011835982)
 size = Vector3(2, 3, 4)
 
-[node name="sub" parent="Environment/outside_wall_block/center wall/entrense" unique_id=2036574922 instance=ExtResource("5_lr2mp")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.36223158, -0.50031805, 0)
-operation = 2
-size = Vector3(4, 2, 0.7)
-
-[node name="sub" parent="Environment/outside_wall_block/center wall" unique_id=88296630 instance=ExtResource("5_lr2mp")]
+[node name="sub1" parent="Environment/outside_wall_block/center wall" unique_id=88296630 instance=ExtResource("5_lr2mp")]
 transform = Transform3D(1.0000013, 0, 0, 0, 1.0000013, 0, 0, 0, 1.0000013, 0.5015364, 6.494494, -0.003941687)
 operation = 2
 size = Vector3(4, 5, 28)
@@ -111,6 +106,11 @@ size = Vector3(4, 5, 28)
 transform = Transform3D(0.921136, -0.38923272, 0, 0.38923272, 0.921136, 0, 0, 0, 0.99999726, 1.8168495, 0.78266674, -0.011835982)
 operation = 2
 size = Vector3(4, 8, 28)
+
+[node name="sub3" parent="Environment/outside_wall_block/center wall" unique_id=2036574922 instance=ExtResource("5_lr2mp")]
+transform = Transform3D(0.9999865, 0, 0, 0, 0.9999865, 0, 0, 0, 0.9999865, 0.46500352, -8.06687, -0.011835982)
+operation = 2
+size = Vector3(4, 2, 0.7)
 
 [node name="Entities" type="Node" parent="." unique_id=1962065255]
 
@@ -123,7 +123,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.928307, -7, 0)
 [node name="ProtoController" parent="Entities" unique_id=267056480 instance=ExtResource("9_vdcoq")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.35542, -8.893237, 5.965979)
 
-[node name="RigidBox" parent="Entities" unique_id=903340787 groups=["rigid_boxes"] instance=ExtResource("10_fy4m5")]
+[node name="RigidBox1" parent="Entities" unique_id=903340787 groups=["rigid_boxes"] instance=ExtResource("10_fy4m5")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 7.854347, -6.857741, -6.3647656)
 physics_material_override = SubResource("PhysicsMaterial_7gy4l")
 specs = Array[String](["BOUNCE", "-", "-"])
@@ -133,7 +133,7 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -3.2
 physics_material_override = SubResource("PhysicsMaterial_iav0o")
 specs = Array[String](["GRAVITY", "GRAVITY", "-"])
 
-[node name="PressurePlate" parent="Entities" unique_id=1716459305 groups=["pressure_plates"] instance=ExtResource("11_tavyg")]
+[node name="PressurePlate1" parent="Entities" unique_id=1716459305 groups=["pressure_plates"] instance=ExtResource("11_tavyg")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, -9, 7)
 
 [node name="PressurePlate2" parent="Entities" unique_id=522417049 groups=["pressure_plates"] instance=ExtResource("11_tavyg")]
