@@ -70,6 +70,7 @@ size = Vector3(1, 2.559082, 3)
 
 [node name="subtraction4" parent="Environment/outside_wall_block" unique_id=1954350162 instance=ExtResource("6_dscar")]
 transform = Transform3D(0.9999678, 0, 0, 0, 0.9999678, 0, 0, 0, 0.9999678, -3.6218204e-05, -6.499792, 8.499694)
+visible = false
 size = Vector3(28, 5, 13)
 metadata/_edit_lock_ = true
 
@@ -116,7 +117,7 @@ size = Vector3(2, 5, 7)
 metadata/_edit_lock_ = true
 
 [node name="subtraction13" parent="Environment/outside_wall_block" unique_id=584773640 instance=ExtResource("6_dscar")]
-transform = Transform3D(0.9999678, 0, 0, 0, 0.86512166, 0.5014946, 0, -0.5014946, 0.86512166, -9.999686, -11.998047, 9.364781)
+transform = Transform3D(0.9999678, 0, 0, 0, 0.7660185, 0.6427658, 0, -0.6427658, 0.7660185, -10, -12.25, 8.89)
 size = Vector3(2, 1, 9)
 metadata/_edit_lock_ = true
 
