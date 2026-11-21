@@ -70,7 +70,6 @@ size = Vector3(1, 2.559082, 3)
 
 [node name="subtraction4" parent="Environment/outside_wall_block" unique_id=1954350162 instance=ExtResource("6_dscar")]
 transform = Transform3D(0.9999678, 0, 0, 0, 0.9999678, 0, 0, 0, 0.9999678, -3.6218204e-05, -6.499792, 8.499694)
-visible = false
 size = Vector3(28, 5, 13)
 metadata/_edit_lock_ = true
 
