@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://bs72ogkvdd7d6"]
 
 [ext_resource type="Script" uid="uid://cpud08jdrs37u" path="res://addons/proto_controller/proto_controller.gd" id="1_ucva2"]
+[ext_resource type="AudioStream" uid="uid://c6aruhxoadbke" path="res://sound/SFX/button1.ogg" id="2_7avfm"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5hfox"]
 albedo_color = Color(1, 0.64705884, 0, 1)
@@ -58,3 +59,6 @@ gizmo_extents = 0.5
 [node name="RayCast3D" type="RayCast3D" parent="." unique_id=913344821]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9291153, 0)
 collision_mask = 4
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="." unique_id=1795154712]
+stream = ExtResource("2_7avfm")

@@ -91,6 +91,7 @@ signal change_gold(direction : int)
 # ==================================================
 
 func _ready() -> void:
+	$AudioStreamPlayer3D.play()
 	check_input_mappings()
 	
 	# Create unique material instance

@@ -8,7 +8,6 @@ var next_level:String
 func _ready() -> void:
 	current_level = str(get_tree().current_scene).left(7).right(1)
 	next_number = int(current_level) + 1
-	$AudioStreamPlayer3D.play()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
