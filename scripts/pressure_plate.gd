@@ -5,6 +5,7 @@ extends Area3D
 
 var body_counter: int = 0
 
+var old_is_pressed := true
 var is_pressed := false
 
 # Called when the node enters the scene tree for the first time.
@@ -26,10 +27,16 @@ func _on_body_shape_exited(body_rid: RID, body: Node3D, body_shape_index: int, l
 func is_pressure_plate_empty( number_of_bodies: int):
 	if number_of_bodies <= 0:
 		red.get_active_material(0).albedo_color = Color.RED
+		old_is_pressed = is_pressed
 		is_pressed = false
+		if old_is_pressed != is_pressed:
+			$AudioStreamPlayer3D.play()
 		get_tree().call_group("doors", "check_pressure_plates")
 		
 	else:
 		red.get_active_material(0).albedo_color = Color.GREEN
+		old_is_pressed = is_pressed
 		is_pressed = true
+		if old_is_pressed != is_pressed:
+			$AudioStreamPlayer3D.play()
 		get_tree().call_group("doors", "check_pressure_plates")

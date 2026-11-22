@@ -25,8 +25,9 @@ func _process(_delta: float) -> void:
 func open_door() -> void:
 	if is_open:
 		return
-
+	
 	is_open = true
+	$AudioStreamPlayer3D.play()
 	door_animation.play("open")
 	
 func close_door() -> void:
@@ -34,4 +35,5 @@ func close_door() -> void:
 		return
 
 	is_open = false
+	$AudioStreamPlayer3D.play()
 	door_animation.play_backwards("open")

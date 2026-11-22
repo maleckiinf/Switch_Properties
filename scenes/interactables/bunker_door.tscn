@@ -3,6 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://bylg0cwdaolts" path="res://addons/door_frame/door/door.glb" id="1_mo17i"]
 [ext_resource type="Script" uid="uid://dxn6hn4sv0fcn" path="res://scripts/bunker_door.gd" id="1_xbw6n"]
 [ext_resource type="PackedScene" uid="uid://lcxmim8ypi2m" path="res://addons/door_frame/frame/frame.glb" id="2_xbw6n"]
+[ext_resource type="AudioStream" uid="uid://br60m4s34kw0q" path="res://sound/SFX/old_elevator_door.mp3" id="4_xycin"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_4doru"]
 size = Vector3(3.6802979, 4.4003296, 1)
@@ -89,3 +90,6 @@ libraries/ = SubResource("AnimationLibrary_xycin")
 
 [node name="mesh" parent="Frame" unique_id=538959366 instance=ExtResource("2_xbw6n")]
 transform = Transform3D(1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, 0, 0, 0)
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="." unique_id=73871335]
+stream = ExtResource("4_xycin")
