@@ -119,7 +119,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.35542, -8.893237, 5.96597
 [node name="RigidBox" parent="Entities" unique_id=903340787 groups=["rigid_boxes"] instance=ExtResource("11_lky54")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -5.145653, -6.857741, -6.3647656)
 physics_material_override = SubResource("PhysicsMaterial_km0xc")
-specs = Array[String](["BOUNCE", "PINK", "-"])
+specs = Array[String](["BOUNCE", "-", "-"])
 
 [node name="RigidBox2" parent="Entities" unique_id=1309963547 groups=["rigid_boxes"] instance=ExtResource("11_lky54")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 3.8543472, 0.14225912, -6.364765)
@@ -142,7 +142,7 @@ shadow_enabled = true
 environment = SubResource("Environment_x42e6")
 
 [node name="light_block" parent="Lighting" unique_id=862725647 instance=ExtResource("12_ies7a")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, -5, -6)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, -5, -7)
 
 [node name="light_block2" parent="Lighting" unique_id=437486550 instance=ExtResource("12_ies7a")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, -6)

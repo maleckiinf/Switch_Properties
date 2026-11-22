@@ -111,6 +111,10 @@ func _ready() -> void:
 # ==================================================
 
 func _unhandled_input(event: InputEvent) -> void:
+	
+	# Reset scene
+	if Input.is_action_just_pressed("Reset"):
+		get_tree().reload_current_scene()
 
 	# Mouse capture
 	if Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT):

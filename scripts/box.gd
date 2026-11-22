@@ -60,11 +60,9 @@ func _ready() -> void:
 	for i in specs:
 		update_spec(i)
 		
-	print("update_spec")
 
 	# Apply initial properties
 	update_appearance()
-	print("update_appearance")
 
 
 # ==================================================
@@ -127,9 +125,7 @@ func update_appearance() -> void:
 	# Update material
 	var material := mesh.get_surface_override_material(0)
 
-	print("bounce = ", physics_material_override.bounce)
-	print("absorbent = ", physics_material_override.absorbent)
-	print("bounce = ", physics_material_override.bounce)
+
 	# PINK
 	if ob_pink == 1:
 		ob_color = Color.PINK

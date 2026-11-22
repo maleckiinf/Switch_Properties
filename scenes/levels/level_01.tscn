@@ -168,8 +168,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20, -5.3, 0)
 
 [node name="UI" type="Node" parent="." unique_id=420425141]
 
-[node name="BottomPanel" parent="UI" unique_id=686628392 instance=ExtResource("13_mhiu8")]
-
 [node name="Aim" type="Label" parent="UI" unique_id=1143344548]
 anchors_preset = 8
 anchor_left = 0.5
@@ -185,6 +183,10 @@ grow_vertical = 2
 text = "o"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="BottomPanel" parent="UI" unique_id=553413134 instance=ExtResource("13_mhiu8")]
+light_mask = 0
+visibility_layer = 0
 
 [connection signal="body_shape_entered" from="Entities/PressurePlate2" to="Entities/Exit_Door" method="_on_pressure_plate_body_shape_entered"]
 [connection signal="body_shape_exited" from="Entities/PressurePlate2" to="Entities/Exit_Door" method="_on_pressure_plate_body_shape_exited"]
