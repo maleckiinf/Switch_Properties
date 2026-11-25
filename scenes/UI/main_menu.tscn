@@ -2,71 +2,341 @@
 
 [ext_resource type="Script" uid="uid://cscoipfsra5ep" path="res://scenes/UI/main_menu.gd" id="1_qwnig"]
 [ext_resource type="FontFile" uid="uid://coucks7vdfou5" path="res://fonts/Michroma-Regular.ttf" id="2_yonvy"]
-[ext_resource type="PackedScene" uid="uid://bi2h7xu8ecfpb" path="res://scenes/interactables/wall_block.tscn" id="3_5jstl"]
+[ext_resource type="PackedScene" uid="uid://cyuq0is1d3de2" path="res://scenes/objects/box.tscn" id="3_5jstl"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_5jstl"]
+sky_top_color = Color(0, 0, 0, 1)
+sky_horizon_color = Color(0, 0, 0, 1)
+sky_cover_modulate = Color(0, 0, 0, 1)
+ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+energy_multiplier = 0.0
+
+[sub_resource type="Sky" id="Sky_tfcbk"]
+sky_material = SubResource("ProceduralSkyMaterial_5jstl")
+
+[sub_resource type="Environment" id="Environment_e2p27"]
+background_mode = 2
+sky = SubResource("Sky_tfcbk")
+glow_enabled = true
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_yonvy"]
 load_path = "res://.godot/imported/0001.png-afe8ec63d5babe00ded65dd737f8fd24.ctex"
 
+[sub_resource type="LabelSettings" id="LabelSettings_4doru"]
+font = ExtResource("2_yonvy")
+font_size = 120
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5jstl"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.1, 0.1, 0.1, 0.3)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tfcbk"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(1, 1, 1, 0.75)
+draw_center = false
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+expand_margin_left = 2.0
+expand_margin_top = 2.0
+expand_margin_right = 2.0
+expand_margin_bottom = 2.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_e2p27"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.225, 0.225, 0.225, 0.6)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ngj32"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.1, 0.1, 0.1, 0.6)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bm8t2"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0, 0, 0, 0.6)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
+[sub_resource type="FontFile" id="FontFile_5jstl"]
+cache/0/variation_coordinates = {}
+cache/0/face_index = 0
+cache/0/embolden = 0.0
+cache/0/transform = Transform2D(1, 0, 0, 1, 0, 0)
+cache/0/spacing_top = 0
+cache/0/spacing_bottom = 0
+cache/0/spacing_space = 0
+cache/0/spacing_glyph = 0
+cache/0/baseline_offset = 0.0
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+cache/0/40/0/ascent = 0.0
+cache/0/40/0/descent = 0.0
+cache/0/40/0/underline_position = 0.0
+cache/0/40/0/underline_thickness = 0.0
+cache/0/40/0/scale = 1.0
+cache/0/17/0/ascent = 0.0
+cache/0/17/0/descent = 0.0
+cache/0/17/0/underline_position = 0.0
+cache/0/17/0/underline_thickness = 0.0
+cache/0/17/0/scale = 1.0
+
+[sub_resource type="Theme" id="Theme_n1wfy"]
+default_font = SubResource("FontFile_5jstl")
+Button/colors/font_color = Color(0.875, 0.875, 0.875, 1)
+Button/colors/font_disabled_color = Color(0.875, 0.875, 0.875, 0.5)
+Button/colors/font_focus_color = Color(0.95, 0.95, 0.95, 1)
+Button/colors/font_hover_color = Color(0.95, 0.95, 0.95, 1)
+Button/colors/font_hover_pressed_color = Color(1, 1, 1, 1)
+Button/colors/font_outline_color = Color(0, 0, 0, 1)
+Button/colors/font_pressed_color = Color(1, 1, 1, 1)
+Button/colors/icon_disabled_color = Color(1, 1, 1, 0.4)
+Button/colors/icon_focus_color = Color(1, 1, 1, 1)
+Button/colors/icon_hover_color = Color(1, 1, 1, 1)
+Button/colors/icon_hover_pressed_color = Color(1, 1, 1, 1)
+Button/colors/icon_normal_color = Color(1, 1, 1, 1)
+Button/colors/icon_pressed_color = Color(1, 1, 1, 1)
+Button/constants/align_to_largest_stylebox = 0
+Button/constants/h_separation = 4
+Button/constants/icon_max_width = 0
+Button/constants/outline_size = 0
+Button/font_sizes/font_size = 16
+Button/styles/disabled = SubResource("StyleBoxFlat_5jstl")
+Button/styles/focus = SubResource("StyleBoxFlat_tfcbk")
+Button/styles/hover = SubResource("StyleBoxFlat_e2p27")
+Button/styles/normal = SubResource("StyleBoxFlat_ngj32")
+Button/styles/pressed = SubResource("StyleBoxFlat_bm8t2")
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_5jstl"]
+
 [node name="main_menu" type="Node2D" unique_id=1990999014]
 script = ExtResource("1_qwnig")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=308897722]
+environment = SubResource("Environment_e2p27")
 
 [node name="0001" type="Sprite2D" parent="." unique_id=294057506]
 visible = false
 position = Vector2(962, 541)
 texture = SubResource("CompressedTexture2D_yonvy")
 
+[node name="Title" type="Label" parent="." unique_id=392670724]
+custom_minimum_size = Vector2(1920, 300)
+anchors_preset = -1
+offset_right = 1920.0
+offset_bottom = 300.0
+text = "Switch  Modifiers"
+label_settings = SubResource("LabelSettings_4doru")
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
 [node name="Button_manager" type="Control" parent="." unique_id=466581895]
 layout_mode = 3
 anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
 
-[node name="Start" type="Button" parent="Button_manager" unique_id=1497102407]
-layout_mode = 0
-offset_left = 1303.0
-offset_top = 227.0
-offset_right = 1729.0
-offset_bottom = 337.0
+[node name="HBoxContainer" type="HBoxContainer" parent="Button_manager" unique_id=1284391449]
+layout_mode = 1
+offset_top = 850.0
+offset_right = 1920.0
+offset_bottom = 1000.0
+theme = SubResource("Theme_n1wfy")
+theme_override_constants/separation = 100
+alignment = 1
+
+[node name="Start" type="Button" parent="Button_manager/HBoxContainer" unique_id=1497102407]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
 theme_override_fonts/font = ExtResource("2_yonvy")
 theme_override_font_sizes/font_size = 40
 text = "START"
 
-[node name="Levels" type="Button" parent="Button_manager" unique_id=1420856054]
-layout_mode = 0
-offset_left = 1302.0
-offset_top = 399.0
-offset_right = 1728.0
-offset_bottom = 509.0
+[node name="Levels" type="Button" parent="Button_manager/HBoxContainer" unique_id=1420856054]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_yonvy")
 theme_override_font_sizes/font_size = 40
 text = "LEVELS
 "
 
-[node name="Options" type="Button" parent="Button_manager" unique_id=1171796483]
-layout_mode = 0
-offset_left = 1304.0
-offset_top = 573.0
-offset_right = 1730.0
-offset_bottom = 683.0
+[node name="Options" type="Button" parent="Button_manager/HBoxContainer" unique_id=1171796483]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_yonvy")
 theme_override_font_sizes/font_size = 40
 text = "OPTIONS"
 
-[node name="Quit" type="Button" parent="Button_manager" unique_id=1065574745]
-layout_mode = 0
-offset_left = 1306.0
-offset_top = 749.0
-offset_right = 1732.0
-offset_bottom = 859.0
+[node name="Quit" type="Button" parent="Button_manager/HBoxContainer" unique_id=1065574745]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_yonvy")
 theme_override_font_sizes/font_size = 40
 text = "QUIT"
 
-[node name="Camera3D" type="Camera3D" parent="." unique_id=406030525]
-transform = Transform3D(1, 0, 0, 0, 0.34851217, 0.93730426, 0, -0.93730426, 0.34851217, 0, 4, 2.0037405)
+[node name="Levels_1_4" type="HBoxContainer" parent="Button_manager" unique_id=1057745893]
+layout_mode = 1
+offset_top = 250.0
+offset_right = 1920.0
+offset_bottom = 400.0
+theme = SubResource("Theme_n1wfy")
+theme_override_constants/separation = 100
+alignment = 1
 
-[node name="wall_block" parent="." unique_id=1605564672 instance=ExtResource("3_5jstl")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2.5)
-size = Vector3(15, 1, 15)
+[node name="1" type="Button" parent="Button_manager/Levels_1_4" unique_id=2031712141]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_yonvy")
+theme_override_font_sizes/font_size = 40
+text = "1"
 
-[connection signal="pressed" from="Button_manager/Start" to="." method="_on_start_pressed"]
-[connection signal="pressed" from="Button_manager/Levels" to="." method="_on_levels_pressed"]
-[connection signal="pressed" from="Button_manager/Options" to="." method="_on_options_pressed"]
-[connection signal="pressed" from="Button_manager/Quit" to="." method="_on_quit_pressed"]
+[node name="2" type="Button" parent="Button_manager/Levels_1_4" unique_id=477216609]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_yonvy")
+theme_override_font_sizes/font_size = 40
+text = "2
+"
+
+[node name="3" type="Button" parent="Button_manager/Levels_1_4" unique_id=722283725]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_yonvy")
+theme_override_font_sizes/font_size = 40
+text = "3
+"
+
+[node name="4" type="Button" parent="Button_manager/Levels_1_4" unique_id=902406457]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_yonvy")
+theme_override_font_sizes/font_size = 40
+text = "4"
+
+[node name="Levels_5_8" type="HBoxContainer" parent="Button_manager" unique_id=1330137131]
+layout_mode = 1
+offset_top = 450.0
+offset_right = 1920.0
+offset_bottom = 600.0
+theme = SubResource("Theme_n1wfy")
+theme_override_constants/separation = 100
+alignment = 1
+
+[node name="5" type="Button" parent="Button_manager/Levels_5_8" unique_id=1697214435]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_yonvy")
+theme_override_font_sizes/font_size = 40
+text = "5
+"
+
+[node name="6" type="Button" parent="Button_manager/Levels_5_8" unique_id=43297575]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_yonvy")
+theme_override_font_sizes/font_size = 40
+text = "6
+
+"
+
+[node name="7" type="Button" parent="Button_manager/Levels_5_8" unique_id=1983669404]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_yonvy")
+theme_override_font_sizes/font_size = 40
+text = "7
+"
+
+[node name="8" type="Button" parent="Button_manager/Levels_5_8" unique_id=107683999]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_yonvy")
+theme_override_font_sizes/font_size = 40
+text = "8"
+
+[node name="Levels_9_10" type="HBoxContainer" parent="Button_manager" unique_id=307462578]
+layout_mode = 0
+offset_top = 650.0
+offset_right = 1920.0
+offset_bottom = 800.0
+theme = SubResource("Theme_n1wfy")
+theme_override_constants/separation = 100
+alignment = 1
+
+[node name="9" type="Button" parent="Button_manager/Levels_9_10" unique_id=552813179]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_yonvy")
+theme_override_font_sizes/font_size = 40
+text = "9
+"
+
+[node name="10" type="Button" parent="Button_manager/Levels_9_10" unique_id=870941305]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_yonvy")
+theme_override_font_sizes/font_size = 40
+text = "10
+
+"
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=203386836]
+transform = Transform3D(0.9135454, -0.40673664, 0, 0.40673664, 0.9135454, 0, 0, 0, 1, 0, 0, 1.6516142)
+size = 1.8373224
+
+[node name="Box" parent="." unique_id=1309963547 instance=ExtResource("3_5jstl")]
+transform = Transform3D(1.0000001, 0, 0, 0, 0.9993911, -0.034899496, 0, 0.034899503, 0.99939084, 0, 0, 0)
+axis_lock_angular_y = true
+physics_material_override = SubResource("PhysicsMaterial_5jstl")
+gravity_scale = 0.0
+constant_torque = Vector3(0.1, 0.1, 0.1)
+specs = Array[String]([" ", " ", " "])
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1547907855]
+transform = Transform3D(0.93969256, -0.01193633, 0.34181175, 0, 0.99939084, 0.03489949, -0.3420201, -0.0327948, 0.9391201, 5.490626, 0, 4.7541065)
+shadow_enabled = true
+sky_mode = 1
+
+[connection signal="pressed" from="Button_manager/HBoxContainer/Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="Button_manager/HBoxContainer/Levels" to="." method="_on_levels_pressed"]
+[connection signal="pressed" from="Button_manager/HBoxContainer/Options" to="." method="_on_options_pressed"]
+[connection signal="pressed" from="Button_manager/HBoxContainer/Quit" to="." method="_on_quit_pressed"]

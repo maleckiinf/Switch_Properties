@@ -1,5 +1,7 @@
 extends Node2D
 
+var speed_rotation_cube = 0.1
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -10,7 +12,7 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	pass
+	$Box.rotate_y(speed_rotation_cube * delta)
 
 func _on_start_pressed() -> void:
 	get_tree().change_scene_to_file("res://scenes/levels/level_01.tscn")

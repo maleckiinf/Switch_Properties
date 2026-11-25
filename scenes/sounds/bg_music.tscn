@@ -1,7 +1,5 @@
 [gd_scene format=3 uid="uid://dgvv6fwnx3482"]
 
-[ext_resource type="AudioStream" uid="uid://7ahpo7ifve04" path="res://sound/Neostead - Breathing.mp3" id="1_nx5uy"]
-
 [node name="BG_Music" type="AudioStreamPlayer3D" unique_id=896420676]
-stream = ExtResource("1_nx5uy")
+visible = false
 autoplay = true
