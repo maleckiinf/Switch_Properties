@@ -13,6 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://6611wd1qsnkc" path="res://scenes/interactables/pressure_plate.tscn" id="11_c7h1x"]
 [ext_resource type="PackedScene" uid="uid://b68yfu12e8vxd" path="res://scenes/interactables/light_block.tscn" id="12_1dtt1"]
 [ext_resource type="PackedScene" uid="uid://b2kjd7fnvycix" path="res://scenes/UI/bottom_panel.tscn" id="13_g78o7"]
+[ext_resource type="PackedScene" uid="uid://dsqdaicwof4ip" path="res://scenes/UI/top_panel.tscn" id="13_sppnv"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_m2jhg"]
 albedo_texture = ExtResource("3_cdd1g")
@@ -160,7 +161,7 @@ size = Vector3(3, 5, 3)
 
 [node name="UI" type="Node" parent="." unique_id=420425141]
 
-[node name="BottomPanel" parent="UI" unique_id=686628392 instance=ExtResource("13_g78o7")]
+[node name="TopPanel" parent="UI" unique_id=686628392 instance=ExtResource("13_sppnv")]
 
 [node name="Aim" type="Label" parent="UI" unique_id=1143344548]
 anchors_preset = 8
@@ -177,3 +178,5 @@ grow_vertical = 2
 text = "o"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="BottomPanel" parent="UI" unique_id=570417927 instance=ExtResource("13_g78o7")]

@@ -113,6 +113,10 @@ func _ready() -> void:
 
 func _unhandled_input(event: InputEvent) -> void:
 	
+	# Menu scene
+	if Input.is_action_just_pressed("Menu"):
+		get_tree().change_scene_to_file("res://scenes/UI/main_menu.tscn")
+	
 	# Reset scene
 	if Input.is_action_just_pressed("Reset"):
 		get_tree().reload_current_scene()

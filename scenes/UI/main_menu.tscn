@@ -214,6 +214,7 @@ theme_override_font_sizes/font_size = 40
 text = "QUIT"
 
 [node name="Levels_1_4" type="HBoxContainer" parent="Button_manager" unique_id=1057745893]
+visible = false
 layout_mode = 1
 offset_top = 250.0
 offset_right = 1920.0
@@ -253,6 +254,7 @@ theme_override_font_sizes/font_size = 40
 text = "4"
 
 [node name="Levels_5_8" type="HBoxContainer" parent="Button_manager" unique_id=1330137131]
+visible = false
 layout_mode = 1
 offset_top = 450.0
 offset_right = 1920.0
@@ -294,6 +296,7 @@ theme_override_font_sizes/font_size = 40
 text = "8"
 
 [node name="Levels_9_10" type="HBoxContainer" parent="Button_manager" unique_id=307462578]
+visible = false
 layout_mode = 0
 offset_top = 650.0
 offset_right = 1920.0

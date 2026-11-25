@@ -1,13 +1,11 @@
 extends Node2D
 
 var speed_rotation_cube = 0.1
-
+var levels_visible := false
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	pass # Replace with function body.
-
-
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -19,12 +17,27 @@ func _on_start_pressed() -> void:
 
 
 func _on_levels_pressed() -> void:
-	print("_on_levels_pressed")
+	levels_visible = !levels_visible
+	levels_show_hide()
 
 
 func _on_options_pressed() -> void:
-	print("_on_options_pressed")
+	levels_visible = false
+	levels_show_hide()
 
 
 func _on_quit_pressed() -> void:
 	get_tree().quit()
+
+
+func levels_show_hide():
+	
+	if levels_visible:
+		$Button_manager/Levels_1_4.show()
+		$Button_manager/Levels_5_8.show()
+		$Button_manager/Levels_9_10.show()
+	else:
+		$Button_manager/Levels_1_4.hide()
+		$Button_manager/Levels_5_8.hide()
+		$Button_manager/Levels_9_10.hide()
+	
