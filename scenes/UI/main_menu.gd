@@ -41,3 +41,8 @@ func levels_show_hide():
 		$Button_manager/Levels_5_8.hide()
 		$Button_manager/Levels_9_10.hide()
 	
+
+
+func _on__pressed( lvl: int) -> void:
+	
+	get_tree().change_scene_to_file("res://scenes/levels/level_0"+ str(lvl) + ".tscn")
