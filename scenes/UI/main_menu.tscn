@@ -23,6 +23,10 @@ glow_enabled = true
 font = ExtResource("2_yonvy")
 font_size = 120
 
+[sub_resource type="LabelSettings" id="LabelSettings_n1wfy"]
+font = ExtResource("2_yonvy")
+font_size = 40
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5jstl"]
 content_margin_left = 4.0
 content_margin_top = 4.0
@@ -166,6 +170,30 @@ uppercase = true
 [node name="Button_manager" type="Control" parent="." unique_id=466581895]
 layout_mode = 3
 anchors_preset = 0
+
+[node name="Sound_Label" type="Label" parent="Button_manager" unique_id=515206307]
+visible = false
+layout_mode = 0
+offset_left = 827.0
+offset_top = 486.0
+offset_right = 1147.0
+offset_bottom = 572.0
+text = "SOUND"
+label_settings = SubResource("LabelSettings_n1wfy")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Sound_Slider" type="HSlider" parent="Button_manager" unique_id=1468031490]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+offset_left = 411.0
+offset_top = 491.0
+offset_right = 988.0
+offset_bottom = 604.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(2, 2)
 
 [node name="HBoxContainer" type="HBoxContainer" parent="Button_manager" unique_id=1284391449]
 layout_mode = 1
@@ -320,7 +348,7 @@ fov = 70.0
 size = 1.8373224
 
 [node name="Box" parent="." unique_id=1309963547 instance=ExtResource("3_5jstl")]
-transform = Transform3D(1.0000001, 0, 0, 0, 0.9993911, -0.034899496, 0, 0.034899503, 0.99939084, 0, 0, 0)
+transform = Transform3D(0.94256234, 0.011657498, 0.33382693, -8.61314e-10, 0.999391, -0.03489949, -0.3340304, 0.032894954, 0.94198805, 0, 0, 0)
 axis_lock_angular_y = true
 physics_material_override = SubResource("PhysicsMaterial_5jstl")
 gravity_scale = 0.0

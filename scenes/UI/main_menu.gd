@@ -2,6 +2,7 @@ extends Node2D
 
 var speed_rotation_cube = 0.1
 var levels_visible := false
+var sound_slider := false
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -17,17 +18,35 @@ func _on_start_pressed() -> void:
 
 
 func _on_levels_pressed() -> void:
+	
 	levels_visible = !levels_visible
 	levels_show_hide()
+	
+	sound_slider = false
+	sound_slider_show_hide()
 
 
 func _on_options_pressed() -> void:
 	levels_visible = false
 	levels_show_hide()
+	
+	sound_slider = !sound_slider
+	sound_slider_show_hide()
+	
 
 
 func _on_quit_pressed() -> void:
 	get_tree().quit()
+	
+
+func sound_slider_show_hide():
+	
+	if sound_slider:
+		$Button_manager/Sound_Label.show()
+		$Button_manager/Sound_Slider.show()
+	else:
+		$Button_manager/Sound_Label.hide()
+		$Button_manager/Sound_Slider.hide()
 
 
 func levels_show_hide():
